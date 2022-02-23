@@ -19,7 +19,7 @@
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
   <meta name="description" content="You can use the MetroCluster switchover operation to provide nondisruptive service to clients while the controller modules on the partner cluster are upgrade...">
-  <meta name="keywords" content=" metrocluster, upgrade, controllers, switchover, switchback, fc, configuration, net, boot, root, aggregate, mcc">
+  <meta name="keywords" content=" metrocluster, upgrade, nondisruptive, controller, switchover, switchback, fc, configuration, net, boot, root, aggregate, mcc">
   
   
 
@@ -3689,7 +3689,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-22 14:07:29 +0000">02/22/2022</time>
+    <time datetime="2022-02-23 22:25:45 +0000">02/23/2022</time>
     
   
 
@@ -3774,7 +3774,7 @@
 <img src="/us-en/ontap-metrocluster/images/note.svg" alt="Note">
 </td>
 <td class="content">
-If the original or new platforms are 8020 systems using ports 1c / 1d in FC-VI mode, contact technical support.
+If the original or new platforms are FAS8020 or AFF8020 systems using ports 1c and 1d in FC-VI mode, contact technical support.
 </td>
 </tr>
 </table>
@@ -3808,7 +3808,7 @@ If the original or new platforms are 8020 systems using ports 1c / 1d in FC-VI m
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
-<p>FAS80xx</p>
+<p>FAS80x0</p>
 </li>
 <li>
 <p>FAS8200</p>
@@ -3820,9 +3820,6 @@ If the original or new platforms are 8020 systems using ports 1c / 1d in FC-VI m
 <li>
 <p>FAS8300</p>
 </li>
-<li>
-<p>FAS8700</p>
-</li>
 </ul>
 </div></div></td>
 </tr>
@@ -3831,6 +3828,9 @@ If the original or new platforms are 8020 systems using ports 1c / 1d in FC-VI m
 <ul>
 <li>
 <p>AFF A300</p>
+</li>
+<li>
+<p>AFF80x0</p>
 </li>
 </ul>
 </div></div></td>
@@ -3848,13 +3848,29 @@ If the original or new platforms are 8020 systems using ports 1c / 1d in FC-VI m
 </tbody>
 </table>
 </li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-metrocluster/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Upgrading a FAS8020 or AFF8020 is not supported when using 1c and 1d ports in FC-VI mode.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>Mapping of storage, FC and Ethernet connections between original nodes and new nodes in advance is recommended.</p>
 </li>
 <li>
 <p>If the new platform has fewer slots than the original system, or if it has fewer or different types of ports, you might need to add an adapter to the new system.</p>
 <div class="paragraph">
-<p>For more information, see the <a href="https://hwu.netapp.com/">NetApp Hardware Universe</a></p>
+<p>For more information, see the <a href="https://hwu.netapp.com/" target="_blank" rel="noopener">NetApp Hardware Universe</a></p>
 </div>
 </li>
 </ul>
@@ -4081,9 +4097,9 @@ If the original or new platforms are 8020 systems using ports 1c / 1d in FC-VI m
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
 </colgroup>
 <tbody>
 <tr>
@@ -4124,7 +4140,7 @@ If the original or new platforms are 8020 systems using ports 1c / 1d in FC-VI m
 <li>
 <p>Determine what physical ports are available on the new controllers and what LIFs can be hosted on the ports.</p>
 <div class="paragraph">
-<p>The controller&#8217;s port usage depends on the platform module and which switches you will use in the MetroCluster IP configuration. You can gather the port usage of the new platforms from the <a href="https://hwu.netapp.com">NetApp Hardware Universe</a>.</p>
+<p>The controller&#8217;s port usage depends on the platform module and which switches you will use in the MetroCluster IP configuration. You can gather the port usage of the new platforms from the <a href="https://hwu.netapp.com" target="_blank" rel="noopener">NetApp Hardware Universe</a>.</p>
 </div>
 <div class="paragraph">
 <p>Also identify the FC-VI card slot usage.</p>
@@ -4837,13 +4853,13 @@ dr-group-id cluster    node      node-systemid dr-partner-systemid
 <li>
 <p>Install the controller modules in the rack or cabinet.</p>
 <div class="paragraph">
-<p><a href="https://docs.netapp.com/platstor/index.jsp">AFF and FAS Documentation Center</a></p>
+<p><a href="https://docs.netapp.com/platstor/index.jsp" target="_blank" rel="noopener">AFF and FAS Documentation Center</a></p>
 </div>
 </li>
 <li>
 <p>If the new controller modules did not come with FC-VI cards of their own and if FC-VI cards from old controllers are compatible on new controllers, swap FC-VI cards and install those in correct slots.</p>
 <div class="paragraph">
-<p>See the <a href="https://hwu.netapp.com">NetApp Hardware Universe</a> for slot info for FC-VI cards.</p>
+<p>See the <a href="https://hwu.netapp.com" target="_blank" rel="noopener">NetApp Hardware Universe</a> for slot info for FC-VI cards.</p>
 </div>
 </li>
 <li>
@@ -4852,7 +4868,7 @@ dr-group-id cluster    node      node-systemid dr-partner-systemid
 <p>Do not connect any other cables that were disconnected from old controllers at this time.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://docs.netapp.com/platstor/index.jsp">AFF and FAS Documentation Center</a></p>
+<p><a href="https://docs.netapp.com/platstor/index.jsp" target="_blank" rel="noopener">AFF and FAS Documentation Center</a></p>
 </div>
 </li>
 <li>
@@ -5052,8 +5068,8 @@ dr-group-id cluster    node      node-systemid dr-partner-systemid
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 25%;">
+<col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
@@ -5434,7 +5450,7 @@ aggr0_node_b_1-root    online      raid_dp, aggr    root, nosnap=on,
 <p>Onboard key management</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Option <code>10</code></p>
+<p>Option &#8220;10&#8221;</p>
 </div>
 <div class="paragraph">
 <p>Follow the prompts to provide the required inputs to recover and restore the key-manager configuration.</p>
@@ -5445,7 +5461,7 @@ aggr0_node_b_1-root    online      raid_dp, aggr    root, nosnap=on,
 <p>External key management</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Option <code>11</code></p>
+<p>Option &#8220;11&#8221;</p>
 </div>
 <div class="paragraph">
 <p>Follow the prompts to provide the required inputs to recover and restore the key-manager configuration.</p>
@@ -5489,10 +5505,10 @@ aggr0_node_b_1-root    online      raid_dp, aggr    root, nosnap=on,
 </div>
 </li>
 <li>
-<p>If autoboot is enabled, interrupt autoboot by pressing control-C.</p>
+<p>If autoboot is enabled, interrupt autoboot by pressing CTRL-C.</p>
 </li>
 <li>
-<p>From the boot menu, run option (6).</p>
+<p>From the boot menu, run option &#8220;6&#8221;.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5500,13 +5516,13 @@ aggr0_node_b_1-root    online      raid_dp, aggr    root, nosnap=on,
 <img src="/us-en/ontap-metrocluster/images/note.svg" alt="Note">
 </td>
 <td class="content">
-Option 6 will reboot the node twice before completing.
+Option &#8220;6&#8221; will reboot the node twice before completing.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Respond <code>y</code> to the system id change prompts. Wait for the second reboot messages:</p>
+<p>Respond &#8220;y&#8221; to the system id change prompts. Wait for the second reboot messages:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -5549,7 +5565,7 @@ Rebooting to load the restored env file...</pre>
 <p>Onboard key management</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Option <code>10</code></p>
+<p>Option &#8220;10&#8221;</p>
 </div>
 <div class="paragraph">
 <p>Follow the prompts to provide the required inputs to recover and restore the key-manager configuration.</p>
@@ -5560,7 +5576,7 @@ Rebooting to load the restored env file...</pre>
 <p>External key management</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Option <code>11</code></p>
+<p>Option &#8220;11&#8221;</p>
 </div>
 <div class="paragraph">
 <p>Follow the prompts to provide the required inputs to recover and restore the key-manager configuration.</p>
@@ -5569,7 +5585,7 @@ Rebooting to load the restored env file...</pre>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Depending on the key manager setting, perform the recovery procedure by selecting option <code>10</code> or option <code>11</code>, followed by option <code>6</code> at the first boot menu prompt. To boot the nodes completely, you might need to repeat the recovery procedure continued by option <code>1</code> (normal boot).</p>
+<p>Depending on the key manager setting, perform the recovery procedure by selecting option &#8220;10&#8221; or option &#8220;11&#8221;, followed by option &#8220;6&#8221; at the first boot menu prompt. To boot the nodes completely, you might need to repeat the recovery procedure continued by option &#8220;1&#8221; (normal boot).</p>
 </div>
 </li>
 <li>
@@ -5603,7 +5619,7 @@ Rebooting to load the restored env file...</pre>
 </tbody>
 </table>
 <div class="paragraph">
-<p>You might need to issue the recover_xxxxxxxx_keymanager command at the boot menu prompt multiple times until the nodes completely boot.</p>
+<p>You might need to issue the <code>recover_xxxxxxxx_keymanager</code> command at the boot menu prompt multiple times until the nodes completely boot.</p>
 </div>
 </li>
 </ul>
@@ -5618,7 +5634,10 @@ Rebooting to load the restored env file...</pre>
 <li>
 <p>Wait for the replaced nodes to boot up.</p>
 <div class="paragraph">
-<p>If either node is in takeover mode, perform a giveback using the <code>storage failover giveback</code> command.</p>
+<p>If either node is in takeover mode, perform a giveback:</p>
+</div>
+<div class="paragraph">
+<p><code>storage failover giveback</code></p>
 </div>
 </li>
 <li>
@@ -5646,7 +5665,7 @@ Rebooting to load the restored env file...</pre>
 <li>
 <p>After the intercluster LIFs are up, check the cluster peer status and re-establish cluster peering as needed.</p>
 <div class="paragraph">
-<p>You may need to reconfigure cluster peering.</p>
+<p>You might need to reconfigure cluster peering.</p>
 </div>
 <div class="paragraph">
 <p><a href="../install-fc/concept_configure_the_mcc_software_in_ontap.html#peering-the-clusters">Creating a cluster peer relationship</a></p>
@@ -5658,10 +5677,10 @@ Rebooting to load the restored env file...</pre>
 <p>VLAN and interface group membership might be different than that of the old node.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/GUID-8929FCE2-5888-4051-B8C0-E27CAF3F2A63.html">Creating a VLAN</a></p>
+<p><a href="https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/GUID-8929FCE2-5888-4051-B8C0-E27CAF3F2A63.html" target="_blank" rel="noopener">Creating a VLAN</a></p>
 </div>
 <div class="paragraph">
-<p><a href="https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/GUID-DBC9DEE2-EAB7-430A-A773-4E3420EE2AA1.html">Combining physical ports to create interface groups</a></p>
+<p><a href="https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/GUID-DBC9DEE2-EAB7-430A-A773-4E3420EE2AA1.html" target="_blank" rel="noopener">Combining physical ports to create interface groups</a></p>
 </div>
 </li>
 </ol>
@@ -5687,7 +5706,7 @@ Rebooting to load the restored env file...</pre>
 <p><code>security key-manager onboard sync</code></p>
 </div>
 <div class="paragraph">
-<p>For more information, see <a href="https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/GUID-E4AB2ED4-9227-4974-A311-13036EB43A3D.html">Restoring onboard key management encryption keys</a>.</p>
+<p>For more information, see <a href="https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/GUID-E4AB2ED4-9227-4974-A311-13036EB43A3D.html" target="_blank" rel="noopener">Restoring onboard key management encryption keys</a>.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -5698,7 +5717,7 @@ Rebooting to load the restored env file...</pre>
 <p><code>security key-manager external restore -vserver <em>SVM</em> -node <em>node</em> -key-server <em>host_name|IP_address:port</em> -key-id key_id -key-tag key_tag <em>node-name</em></code></p>
 </div>
 <div class="paragraph">
-<p>For more information, see <a href="https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/GUID-32DA96C3-9B04-4401-92B8-EAF323C3C863.html">Restoring external key management encryption keys</a>.</p>
+<p>For more information, see <a href="https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/GUID-32DA96C3-9B04-4401-92B8-EAF323C3C863.html" target="_blank" rel="noopener">Restoring external key management encryption keys</a>.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -5913,7 +5932,7 @@ Remote: cluster_A         Configuration state configured
 <div class="title">Step</div>
 <ol class="arabic">
 <li>
-<p>To resume automatic support case generation, send an Autosupport message to indicate that the maintenance is complete.</p>
+<p>To resume automatic support case generation, send an AutoSupport message to indicate that the maintenance is complete.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -5941,7 +5960,7 @@ Remote: cluster_A         Configuration state configured
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Use the steps in <a href="http://docs.netapp.com/ontap-9/topic/com.netapp.doc.hw-metrocluster-tiebreaker/GUID-7259BCA4-104C-49C6-BAD0-1068CA2A3DA5.html">Adding MetroCluster configurations</a> in the <em>MetroCluster Tiebreaker Installation and Configuration Guide</em>.</p>
+<p>Use the steps in <a href="http://docs.netapp.com/ontap-9/topic/com.netapp.doc.hw-metrocluster-tiebreaker/GUID-7259BCA4-104C-49C6-BAD0-1068CA2A3DA5.html" target="_blank" rel="noopener">Adding MetroCluster configurations</a> in <em>MetroCluster Tiebreaker Installation and Configuration</em>.</p>
 </li>
 </ol>
 </div>
