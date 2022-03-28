@@ -3680,7 +3680,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-17 13:09:38 +0000">03/17/2022</time>
+    <time datetime="2022-03-28 12:43:53 +0000">03/28/2022</time>
     
   
 
@@ -3690,6 +3690,14 @@
           alt="netapp-martyh"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/66496079?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-folivia">
+    <img  class="avatar avatar-small"
+          alt="netapp-folivia"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/91882669?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -4438,6 +4446,63 @@ aggr_data_a2
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
+<p>Configure the MetroCluster to implement the changes:</p>
+<div class="paragraph">
+<p><code>metrocluster configure</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-metrocluster/images/note.svg" alt="Note">
+</td>
+<td class="content">
+You must run <code>metrocluster configure</code> and <strong>not</strong> <code>metrocluster configure -refresh true</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cluster_A::&gt; metrocluster configure
+
+[Job 439] Job succeeded: Configure is successful.
+
+cluster_A::&gt;</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the nodes are added to their DR group:</p>
+<div class="paragraph">
+<p><code>metrocluster node show</code></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cluster_A::&gt; metrocluster node show
+
+DR                               Configuration  DR
+Group Cluster Node               State          Mirroring Mode
+----- ------- ------------------ -------------- --------- --------------------
+1     cluster_A
+              node-A-1-FC        configured     enabled   normal
+              node-A-2-FC        configured     enabled   normal
+      Cluster-B
+              node-B-1-FC        configured     enabled   normal
+              node-B-2-FC        configured     enabled   normal
+2     cluster_A
+              node-A-3-IP        configured     enabled   normal
+              node-A-4-IP        configured     enabled   normal
+      Cluster-B
+              node-B-3-IP        configured     enabled   normal
+              node-B-4-IP        configured     enabled   normal
+8 entries were displayed.
+
+cluster_A::&gt;</pre>
+</div>
+</div>
+</li>
+<li>
 <p>Create mirrored data aggregates on each of the new MetroCluster nodes:</p>
 <div class="paragraph">
 <p><code>storage aggregate create -aggregate aggregate-name -node node-name -diskcount no-of-disks -mirror true</code></p>
@@ -4493,51 +4558,6 @@ Do you want to continue? {y|n}: y
 [Job 440] Job succeeded: DONE
 
 cluster_A::&gt;</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Configure the MetroCluster to implement the changes:</p>
-<div class="paragraph">
-<p><code>metrocluster configure</code></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>cluster_A::*&gt; metrocluster configure
-
-[Job 439] Job succeeded: Configure is successful.
-
-cluster_A::*&gt;</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Verify that the nodes are added to their DR group:</p>
-<div class="paragraph">
-<p><code>metrocluster node show</code></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>cluster_A::*&gt; metrocluster node show
-
-DR                               Configuration  DR
-Group Cluster Node               State          Mirroring Mode
------ ------- ------------------ -------------- --------- --------------------
-1     cluster_A
-              node-A-1-FC        configured     enabled   normal
-              node-A-2-FC        configured     enabled   normal
-      Cluster-B
-              node-B-1-FC        configured     enabled   normal
-              node-B-2-FC        configured     enabled   normal
-2     cluster_A
-              node-A-3-IP        configured     enabled   normal
-              node-A-4-IP        configured     enabled   normal
-      Cluster-B
-              node-B-3-IP        configured     enabled   normal
-              node-B-4-IP        configured     enabled   normal
-8 entries were displayed.
-
-cluster_A::*&gt;</pre>
 </div>
 </div>
 </li>
@@ -4598,7 +4618,7 @@ cluster_A   MDV_CRS_d6b0b313ff5611e9837100a098544e51_B
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>cluster_A::&gt; vol move start -volume MDV_CRS_d6b0b313ff5611e9837100a098544e51_A -destination-aggregate data_a3 -vserver cluster_A
+<pre>cluster_A::*&gt; vol move start -volume MDV_CRS_d6b0b313ff5611e9837100a098544e51_A -destination-aggregate data_a3 -vserver cluster_A
 
 Warning: You are about to modify the system volume
          "MDV_CRS_d6b0b313ff5611e9837100a098544e51_A". This might cause severe
@@ -4618,7 +4638,7 @@ Warning: You are about to modify the system volume
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>cluster_A::&gt; vol show MDV_CRS_d6b0b313ff5611e9837100a098544e51_B
+<pre>cluster_A::*&gt; vol show MDV_CRS_d6b0b313ff5611e9837100a098544e51_B
 Vserver     Volume       Aggregate    State      Type       Size  Available Used%
 ---------   ------------ ------------ ---------- ---- ---------- ---------- -----
 cluster_A   MDV_CRS_d6b0b313ff5611e9837100a098544e51_B
