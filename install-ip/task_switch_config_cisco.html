@@ -3680,7 +3680,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-07 11:09:04 +0000">03/07/2022</time>
+    <time datetime="2022-03-30 11:22:20 +0000">03/30/2022</time>
     
   
 
@@ -4787,30 +4787,22 @@ The replay protection window size represents the maximum out-of-sequence frames 
 <pre>IP_switch_A_1(config-macsec-policy)# conf-offset CONF-OFFSET-0</pre>
 </div>
 </div>
-<div class="paragraph">
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-metrocluster/images/note.svg" alt="Note">
+</td>
+<td class="content">
+This command might be necessary for intermediate switches to use packet headers (dmac, smac, etype) like MPLS tags.
+</td>
+</tr>
+</table>
 </div>
 </li>
 </ul>
 </div>
 </li>
-</ol>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p>+</p>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; fb53efa2361ac88998ad17907c3a3fe6d3aafb6d
-NOTE: This command might be necessary for intermediate switches to use packet headers (dmac, smac, etype) like MPLS tags.</p>
-</div>
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
 <li>
 <p>Copy the running configuration to the startup configuration:</p>
 <div class="paragraph">
@@ -4835,9 +4827,9 @@ NOTE: This command might be necessary for intermediate switches to use packet he
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>=== Verifying the MACsec configuration</p>
 </div>
+<div class="sect2">
+<h3 id="verifying-the-macsec-configuration">Verifying the MACsec configuration</h3>
 <div class="olist arabic">
 <div class="title">Steps</div>
 <ol class="arabic">
@@ -4909,9 +4901,9 @@ NOTE: This command might be necessary for intermediate switches to use packet he
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>=== Configuring a MACsec fallback key on a WAN ISL port</p>
 </div>
+<div class="sect2">
+<h3 id="configuring-a-macsec-fallback-key-on-a-wan-isl-port">Configuring a MACsec fallback key on a WAN ISL port</h3>
 <div class="paragraph">
 <p>You can configure a fallback key to initiate a backup session if the primary session fails as a result of a key/key name (CKN) mismatch or a finite key duration between the switch and peer.</p>
 </div>
@@ -4984,9 +4976,12 @@ You should configure the fallback-keychain using the steps in <em>Configuring a 
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>== Setting Forward Error Correction for systems using 25-Gbps connectivity</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="setting-forward-error-correction-for-systems-using-25-gbps-connectivity">Setting Forward Error Correction for systems using 25-Gbps connectivity</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>If your system is configured using 25-Gbps connectivity, you need to set the Forward Error Correction (fec) parameter manually to off after applying the RCF file. The RCF file does not apply this setting.</p>
 </div>
@@ -4998,60 +4993,48 @@ You should configure the fallback-keychain using the steps in <em>Configuring a 
 <p><a href="port_usage_3232c_9336c.html">Platform port assignments for Cisco 3232C or Cisco 9336C switches</a></p>
 </div>
 <div class="paragraph">
-<p>This task only applies to platforms using 25-Gbps connectivity:
-•	AFF A300
-•	FAS 8200
-•	FAS 500f
-•	AFF A250</p>
+<p>This task only applies to platforms using 25-Gbps connectivity:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>AFF A300</p>
+</li>
+<li>
+<p>FAS 8200</p>
+</li>
+<li>
+<p>FAS 500f</p>
+</li>
+<li>
+<p>AFF A250</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>This task must be performed on all four switches in the MetroCluster IP configuration.</p>
-</div>
-<div class="paragraph">
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-. Set the fec parameter to off on each 25-Gbps port that is connected to a controller module, and then copy the running configuration to the startup configuration:
- .. Enter configuration mode: <code>config t</code>
- .. Specify the 25-Gbps interface to configure: <code>interface interface-ID</code>
- .. Set fec to off: <code>fec off</code>
- .. Repeat the previous steps for each 25-Gbps port on the switch.
- .. Exit configuration mode: <code>exit</code></p>
-</div>
-</div>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>Set the <code>fec</code> parameter to &#8220;off&#8221; on each 25-Gbps port that is connected to a controller module, and then copy the running configuration to the startup configuration:</p>
+<p>Set the fec parameter to off on each 25-Gbps port that is connected to a controller module, and then copy the running configuration to the startup configuration:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Enter configuration mode:</p>
-<div class="paragraph">
-<p><code>config t</code></p>
-</div>
+<p>Enter configuration mode: <code>config t</code></p>
 </li>
 <li>
-<p>Specify the 25-Gbps interface to configure:</p>
-<div class="paragraph">
-<p><code>interface interface-ID</code></p>
-</div>
+<p>Specify the 25-Gbps interface to configure: <code>interface interface-ID</code></p>
 </li>
 <li>
-<p>Set <code>fec</code> to &#8220;off&#8221;:</p>
-<div class="paragraph">
-<p><code>fec off</code></p>
-</div>
+<p>Set fec to off: <code>fec off</code></p>
 </li>
 <li>
 <p>Repeat the previous steps for each 25-Gbps port on the switch.</p>
 </li>
 <li>
-<p>Exit configuration mode:</p>
-<div class="paragraph">
-<p><code>exit</code>
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; fb53efa2361ac88998ad17907c3a3fe6d3aafb6d</p>
-</div>
+<p>Exit configuration mode: <code>exit</code></p>
 <div class="paragraph">
 <p>The following example shows the commands for interface Ethernet1/25/1 on switch IP_switch_A_1:</p>
 </div>
@@ -5073,7 +5056,6 @@ IP_switch_A_1# copy running-config startup-config</pre>
 <p>Repeat the previous step on the other three switches in the MetroCluster IP configuration.</p>
 </li>
 </ol>
-</div>
 </div>
 </div>
 </div>
