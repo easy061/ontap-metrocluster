@@ -526,7 +526,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_mediator_requirements.html</loc>
       
-      <lastmod>2022-02-03T22:01:55+00:00</lastmod>
+      <lastmod>2022-04-01T14:14:24+00:00</lastmod>
       
     </url>
   
@@ -1345,7 +1345,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster//search.html</loc>
       
-      <lastmod>2022-03-31T18:04:50+00:00</lastmod>
+      <lastmod>2022-04-01T22:29:59+00:00</lastmod>
       
     </url>
   
@@ -1637,27 +1637,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_changing_mediator_password.html</loc>
-      
-      <lastmod>2021-08-20T20:25:51+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_changing_mediator_password.html</loc>
-      
-      <lastmod>2021-08-20T20:25:51+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_changing_mediator_username.html</loc>
-      
-      <lastmod>2021-08-20T20:25:51+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_check_for_mcc_configuration_errors_with_config_advisor.html</loc>
       
       <lastmod>2021-08-27T15:28:23+00:00</lastmod>
@@ -1786,7 +1765,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_configuring_the_ontap_mediator_service_from_a_metrocluster_ip_configuration.html</loc>
       
-      <lastmod>2022-02-03T22:01:55+00:00</lastmod>
+      <lastmod>2022-03-31T19:24:46+00:00</lastmod>
       
     </url>
   
@@ -2186,13 +2165,6 @@
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_install_and_cable_the_new_controller.html</loc>
       
       <lastmod>2022-02-03T22:01:55+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_install_configure_mediator.html</loc>
-      
-      <lastmod>2022-02-14T15:34:56+00:00</lastmod>
       
     </url>
   
@@ -2872,13 +2844,6 @@
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/transition/task_transition_the_mcc_fc_nodes_2n_mcc_transition_supertask.html</loc>
       
       <lastmod>2022-02-03T22:01:55+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_uninstall_mediator.html</loc>
-      
-      <lastmod>2021-08-26T13:54:59+00:00</lastmod>
       
     </url>
   
