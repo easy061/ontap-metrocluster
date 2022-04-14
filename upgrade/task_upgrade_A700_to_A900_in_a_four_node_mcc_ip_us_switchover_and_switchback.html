@@ -9,14 +9,14 @@
   <meta property="og:title" content="Upgrade controllers from AFF A700 to AFF A900 in a MetroCluster IP configuration using switchover and switchback (ONTAP 9.10.1 and later)" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_upgrade_A700_to_A900_in_a_four_node_mcc_ip_us_switchover_and_switchback.html" />
-	<meta property="og:description" content="Beginning with ONTAP 9.8, you can use the MetroCluster switchover operation to provide nondisruptive service to clients while the controller modules on the p..." />
+	<meta property="og:description" content="BYou can use the MetroCluster switchover operation to provide nondisruptive service to clients while the controller modules on the partner cluster are upgrad..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap-metrocluster/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Beginning with ONTAP 9.8, you can use the MetroCluster switchover operation to provide nondisruptive service to clients while the controller modules on the p...">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="BYou can use the MetroCluster switchover operation to provide nondisruptive service to clients while the controller modules on the partner cluster are upgrad...">
   <meta name="keywords" content=" metrocluster, upgrade, controller, ip, configuration, switchover, switchback, workflow, nodes, tiebreaker, verify, bootrage, root, aggregate, disks"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap-metrocluster/images/favicon.ico" type="image/x-icon">
 
@@ -3895,7 +3895,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-12 20:37:48 +0000">04/12/2022</time>
+    <time datetime="2022-04-13 17:56:39 +0000">04/13/2022</time>
     
   
 
@@ -3905,6 +3905,14 @@
           alt="netapp-folivia"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/91882669?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
+    <img  class="avatar avatar-small"
+          alt="netapp-ahibbard"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/85892662?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -4135,12 +4143,10 @@ For the correct RCF file version for your switch model, refer to the <a href="ht
 <div class="ulist">
 <ul>
 <li>
-<p>link:../install-ip/task_switch_config_broadcom.html#resetting-the-broadcom-ip-switch-to-factory-defaults
-#resetting-the-broadcom-ip-switch-to-factory-defaults[Resetting the Broadcom IP switch to factory defaults]</p>
+<p><a href="../install-ip/task_switch_config_broadcom.html#resetting-the-broadcom-ip-switch-to-factory-defaults">Resetting the Broadcom IP switch to factory defaults</a></p>
 </li>
 <li>
-<p>link:../install-ip/task_switch_config_broadcom.html#resetting-the-broadcom-ip-switch-to-factory-defaults
-#resetting-the-cisco-ip-switch-to-factory-defaults[Resetting the Cisco IP switch to factory defaults]</p>
+<p><a href="../install-ip/task_switch_config_broadcom.html#resetting-the-cisco-ip-switch-to-factory-defaults">Resetting the Cisco IP switch to factory defaults</a></p>
 </li>
 </ul>
 </div>
@@ -4153,12 +4159,10 @@ For the correct RCF file version for your switch model, refer to the <a href="ht
 <div class="ulist">
 <ul>
 <li>
-<p>link:../install-ip/task_switch_config_broadcom.html#resetting-the-broadcom-ip-switch-to-factory-defaults
-#downloading-and-installing-the-broadcom-rcf-files[Downloading and installing the Broadcom RCF files]</p>
+<p><a href="../install-ip/task_switch_config_broadcom.html#downloading-and-installing-the-broadcom-rcf-files">Downloading and installing the Broadcom RCF files</a></p>
 </li>
 <li>
-<p>link:../install-ip/task_switch_config_broadcom.html#resetting-the-broadcom-ip-switch-to-factory-defaults
-#downloading-and-installing-the-cisco-ip-rcf-files[Downloading and installing the Cisco IP RCF files]</p>
+<p><a href="../install-ip/task_switch_config_broadcom.html#downloading-and-installing-the-cisco-ip-rcf-files">Downloading and installing the Cisco IP RCF files</a></p>
 </li>
 </ul>
 </div>
@@ -4538,7 +4542,7 @@ dr-group-id cluster     node     node-systemid ha-partner-systemid dr-partner-sy
 <p>Tiebreaker</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="install-stretch/concept_considerations_when_removing_mcc_configurations.html">Removing MetroCluster Configurations</a> in the <em>MetroCluster Tiebreaker Installation and Configuration content</em></p>
+<p><a href="tiebreaker/concept_configuring_the_tiebreaker_software.html#commands-for-modifying-metrocluster-tiebreaker-configurations">Removing MetroCluster Configurations</a> in the <em>MetroCluster Tiebreaker Installation and Configuration content</em></p>
 </div></div></td>
 </tr>
 <tr>
@@ -4956,7 +4960,7 @@ It is not possible to check the version of ONTAP installed on the boot media of 
 <p>Change to the web-accessible directory and verify that the files you need are available.</p>
 </li>
 <li>
-<p>Your directory listing should contain &lt;ontap_version&gt;_image.tgz.</p>
+<p>Your directory listing should contain &lt;ontap_version&gt;\_image.tgz.</p>
 </li>
 <li>
 <p>Configure the netboot connection by choosing one of the following actions.</p>
@@ -5002,7 +5006,7 @@ You should use the management port and IP as the netboot connection. Do not use 
 <div class="paragraph">
 <p><code>&lt;filer_addr&gt;</code> is the IP address of the storage system. <code>&lt;netmask&gt;</code> is the network mask of the storage system.
 <code>&lt;gateway&gt;</code> is the gateway for the storage system.
-<code>&lt;dns_addr</code> is the IP address of a name server on your network. This parameter is optional.
+<code>&lt;dns_addr&gt;</code> is the IP address of a name server on your network. This parameter is optional.
 <code>&lt;dns_domain&gt;</code> is the Domain Name Service (DNS) domain name. This parameter is optional.
 NOTE:	Other parameters might be necessary for your interface. Enter <code>help ifconfig</code> at the firmware prompt for details.</p>
 </div></div></td>
@@ -5014,7 +5018,7 @@ NOTE:	Other parameters might be necessary for your interface. Enter <code>help i
 <p>Perform netboot on node_B_1:
 <code>netboot</code> <code><a href="http://&lt;web_server_ip/path_to_web_accessible_directory&gt;/netboot/kernel" class="bare">http://&lt;web_server_ip/path_to_web_accessible_directory&gt;/netboot/kernel</a></code></p>
 <div class="paragraph">
-<p>The <code>&lt;path_to_the_web-accessible_directory&gt;</code> should lead to where you downloaded the <code>&lt;ontap_version&gt;_image.tgz</code> in <a href="#step2-download-software">Step 2</a>.</p>
+<p>The <code>&lt;path_to_the_web-accessible_directory&gt;</code> should lead to where you downloaded the <code>&lt;ontap_version&gt;\_image.tgz</code> in <a href="#step2-download-software">Step 2</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -5060,7 +5064,7 @@ NOTE:	Disregard the following message: <code>This procedure is not supported for
 </li>
 <li>
 <p>If you are prompted to continue the procedure, enter <code>y</code>, and when prompted for the package, enter the URL:
-<code><a href="http://&lt;web_server_ip/path_to_web-accessible_directory&gt;/&lt;ontap_version&gt;_image.tgz" class="bare">http://&lt;web_server_ip/path_to_web-accessible_directory&gt;/&lt;ontap_version&gt;_image.tgz</a></code></p>
+<code><a href="http://&lt;web_server_ip/path_to_web-accessible_directory&gt;/&lt;ontap_version&gt;\_image.tgz" class="bare">http://&lt;web_server_ip/path_to_web-accessible_directory&gt;/&lt;ontap_version&gt;\_image.tgz</a></code></p>
 </li>
 <li>
 <p>Complete the following substeps to reboot the controller module:</p>
@@ -5095,7 +5099,7 @@ Are you sure you want to continue?:</code></p>
 </div>
 </li>
 <li>
-<p>Select option <code>5</code> to go to maintenance mode from the boot menu. Answer <code>yes</code> to the prompts until the node stops at maintenance mode and the command prompt *&gt;.</p>
+<p>Select option <code>5</code> to go to maintenance mode from the boot menu. Answer <code>yes</code> to the prompts until the node stops at maintenance mode and the command prompt \*&gt;.</p>
 </li>
 <li>
 <p>Repeat these steps to netboot node_B_2.</p>
@@ -5302,12 +5306,10 @@ Are you sure you want to continue?:</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>link:../install-ip/task_switch_config_broadcom.html#resetting-the-broadcom-ip-switch-to-factory-defaults
-#resetting-the-broadcom-ip-switch-to-factory-defaults[Resetting the Broadcom IP switch to factory defaults]</p>
+<p><a href="../install-ip/task_switch_config_broadcom.html#resetting-the-broadcom-ip-switch-to-factory-defaults">Resetting the Broadcom IP switch to factory defaults</a></p>
 </li>
 <li>
-<p>link:../install-ip/task_switch_config_broadcom.html#resetting-the-broadcom-ip-switch-to-factory-defaults
-#resetting-the-cisco-ip-switch-to-factory-defaults[Resetting the Cisco IP switch to factory defaults]</p>
+<p><a href="../install-ip/task_switch_config_broadcom.html#resetting-the-cisco-ip-switch-to-factory-defaults">Resetting the Cisco IP switch to factory defaults</a></p>
 </li>
 </ul>
 </div>
@@ -5320,12 +5322,10 @@ Are you sure you want to continue?:</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>link:../install-ip/task_switch_config_broadcom.html#resetting-the-broadcom-ip-switch-to-factory-defaults
-#downloading-and-installing-the-broadcom-rcf-files[Downloading and installing the Broadcom RCF files]</p>
+<p><a href="../install-ip/task_switch_config_broadcom.html#downloading-and-installing-the-broadcom-rcf-files">Downloading and installing the Broadcom RCF files</a></p>
 </li>
 <li>
-<p>link:../install-ip/task_switch_config_broadcom.html#resetting-the-broadcom-ip-switch-to-factory-defaults
-#downloading-and-installing-the-cisco-ip-rcf-files[Downloading and installing the Cisco IP RCF files]</p>
+<p><a href="../install-ip/task_switch_config_broadcom.html#downloading-and-installing-the-cisco-ip-rcf-files">Downloading and installing the Cisco IP RCF files</a></p>
 </li>
 </ul>
 </div>
