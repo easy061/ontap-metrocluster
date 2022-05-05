@@ -3897,11 +3897,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-03 22:01:55 +0000">02/03/2022</time>
+    <time datetime="2022-04-25 13:39:12 +0000">04/25/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-folivia">
+    <img  class="avatar avatar-small"
+          alt="netapp-folivia"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/91882669?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -4097,18 +4105,6 @@
 <div class="paragraph">
 <p>These conflicting data LIFs or cluster LIFs on the MetroCluster FC nodes will be moved at the appropriate step in the transition procedure.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap-metrocluster/images/note.svg" alt="Note">
-</td>
-<td class="content">
-On the AFF A220 and FAS2750 systems, the MetroCluster IP physical ports are also used as cluster interfaces. If the new MetroCluster IP nodes are AFF A220 or FAS2750 systems, existing cluster LIFs do not need to be moved.
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>The following table shows the MetroCluster IP ports by platform model. You can ignore the VLAN ID column.</p>
 </div>
@@ -4180,22 +4176,23 @@ On the AFF A220 and FAS2750 systems, the MetroCluster IP physical ports are also
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">AFF A220 and FAS2750</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">FAS8300/A400/FAS8700</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>e0a</p>
+<p>e1a</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>10</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">On these systems, these physical ports are also used as cluster interfaces.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>e0b</p>
+<p>e1b</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>20</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">AFF A250 and FAS500f</p></td>
@@ -4209,7 +4206,7 @@ On the AFF A220 and FAS2750 systems, the MetroCluster IP physical ports are also
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>e0d</p>
+<p>e0b</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>20</p>

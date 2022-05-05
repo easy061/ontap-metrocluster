@@ -3897,7 +3897,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-13 16:39:15 +0000">04/13/2022</time>
+    <time datetime="2022-05-05 13:39:19 +0000">05/05/2022</time>
     
   
 
@@ -3923,6 +3923,14 @@
           alt="netapp-ahibbard"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-folivia">
+    <img  class="avatar avatar-small"
+          alt="netapp-folivia"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/91882669?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -3964,6 +3972,9 @@
 </li>
 <li>
 <p>The new nodes must have enough storage to accommodate the data of the old nodes, along with adequate disks for root aggregates and spare disks.</p>
+</li>
+<li>
+<p>This procedure is not supported on FAS2750 or AFF A220 systems.</p>
 </li>
 </ul>
 </div>
@@ -4610,7 +4621,9 @@ cluster_A::&gt;</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The following platform models use VLANs and allow configuration of a non-default VLAN ID.</p>
+<p>The following platform models can be added to the existing MetroCluster configuration if the VLANs used are 10/20 or greater than 100. If any other VLANs are used, then these platforms cannot be added
+to the existing configuration as the MetroCluster interface cannot be configured.
+If you are using any other platform, the VLAN configuration is not relevant as this is not required in ONTAP.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
