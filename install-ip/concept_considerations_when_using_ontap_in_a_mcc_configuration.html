@@ -3897,7 +3897,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-04 14:51:40 +0000">05/04/2022</time>
+    <time datetime="2022-05-12 09:31:02 +0000">05/12/2022</time>
     
   
 
@@ -4463,7 +4463,10 @@ Even if the source SVM is down, LIF placement might proceed normally if there is
 <p>Beginning with ONTAP 9.5, active storage virtual machines (SVMs) in a MetroCluster configuration can be used as sources with the SnapMirror SVM disaster recovery feature. The destination SVM must be on the third cluster outside of the MetroCluster configuration.</p>
 </div>
 <div class="paragraph">
-<p>Beginning with ONTAP 9.11.1, both clusters within a MetroCluster configuration can be the source for an SVM DR relationship with a third site.</p>
+<p>Beginning with ONTAP 9.11.1, both sites within a MetroCluster configuration can be the source for an SVM DR relationship with a FAS or AFF destination cluster as shown in the following image.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../media/svmdr_new_topology-2.png" alt="SVM DR new topology"></span></p>
 </div>
 <div class="paragraph">
 <p>You should be aware of the following requirements and limitations of using SVMs with SnapMirror disaster recovery:</p>

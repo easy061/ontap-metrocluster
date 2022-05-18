@@ -3897,11 +3897,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-11-23 22:27:32 +0000">11/23/2021</time>
+    <time datetime="2022-03-07 13:44:08 +0000">03/07/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-folivia">
+    <img  class="avatar avatar-small"
+          alt="netapp-folivia"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/91882669?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-martyh">
     <img  class="avatar avatar-small"
           alt="netapp-martyh"
@@ -3973,6 +3981,28 @@
 </ul>
 </div>
 </li>
+<li>
+<p>If you connect two MetroCluster configurations and both use the same controller type, then you must use MetroCluster port groups 3 and 4. If the controllers are different, then you must use either MetroCluster port groups 3 and 4 for one type and MetroCluster port groups 1 and 2 for the other.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For example, if you connect:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Two MetroCluster configurations consisting of FAS2750/AFF A220 only, or FAS500f/AFF A250 only, you must select MetroCluster port groups 3 and 4.</p>
+</li>
+<li>
+<p>Two MetroCluster configurations where one MetroCluster is type FAS2750/AFF A220 and the other is FAS500f/AFF A250, you must select port groups 3 and 4 for one, and port groups 1 and 2 for the other.
+In the <a href="https://mysupport.netapp.com/site/tools/tool-eula/rcffilegenerator">RcfFileGenerator for MetroCluster IP</a>, drop-down fields 1 and 2 only populate with the supported platform after you select platforms in drop-down fields 3 and 4.
+Refer to <a href="../install-ip/using_rcf_generator.html">Using the port tables with the RcfFileGenerator tool or multiple MetroCluster configurations</a> for more information on how to use the port tables.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 </ol>
 </div>
 </div>
@@ -3993,6 +4023,16 @@
 <div class="imageblock">
 <div class="content">
 <img src="../media/mcc_ip_cabling_a_aff_a250_or_fas500f_to_a_broadcom_bes_53248_switch.png" alt="mcc ip cabling a aff a250 or fas500f to a broadcom bes 53248 switch">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="switch-port-usage-for-combined-use-of-aff-a250-or-fas500f-and-aff-a220-or-fas2750-systems">Switch port usage for combined use of AFF A250 or FAS500f and AFF A220 or FAS2750 systems</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../media/mcc_ip_cabling_aff_a250_and_%20a220_to_a_broadcom_bes_53248_switch.png" alt="mcc ip cabling aff a250 and  a220 to a broadcom bes 53248 switch">
 </div>
 </div>
 </div>
