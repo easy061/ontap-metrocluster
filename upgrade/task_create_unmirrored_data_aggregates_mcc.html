@@ -1719,8 +1719,6 @@
 
 
 
-
-
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
@@ -3381,10 +3379,8 @@
         Send a custom AutoSupport message prior to negotiated switchover
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/manage/task_perform_a_negotiated_switchover.html">
         Perform a negotiated switchover
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/manage/concept_output_for_storage_aggregate_plex_show_after_a_mcc_switchover.html">
-        Output for the storage aggregate plex show command is indeterminate after a MetroCluster switchover
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/manage/task_confirm_that_dr_partners_have_come_online.html">
-        Confirm that the DR partners have come online
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/manage/task_verify_SVMs are_running_and_aggregates_are_online.html">
+        Verify that the SVMs are running and the aggregates are online
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Heal the configuration</div>
       </a>
@@ -3897,11 +3893,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-21 14:46:42 +0000">12/21/2021</time>
+    <time datetime="2022-05-16 13:49:10 +0000">05/16/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-folivia">
+    <img  class="avatar avatar-small"
+          alt="netapp-folivia"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/91882669?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-martyh">
     <img  class="avatar avatar-small"
           alt="netapp-martyh"
@@ -3915,14 +3919,6 @@
           alt="netapp-thomi"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/54111336?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ivanad">
-    <img  class="avatar avatar-small"
-          alt="netapp-ivanad"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/76115643?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -3985,18 +3981,6 @@ The unmirrored aggregates must be local to the node owning them.
 <div class="olist arabic">
 <div class="title">Steps</div>
 <ol class="arabic">
-<li>
-<p>Enable unmirrored aggregate deployment:</p>
-<div class="paragraph">
-<p><code>metrocluster modify -enable-unmirrored-aggr-deployment true</code></p>
-</div>
-</li>
-<li>
-<p>Verify that disk auto-assignment is disabled:</p>
-<div class="paragraph">
-<p><code>disk option show</code></p>
-</div>
-</li>
 <li>
 <p>Install and cable the disk shelves that will contain the unmirrored aggregates.</p>
 <div class="paragraph">
@@ -4079,18 +4063,6 @@ The unmirrored aggregates must be local to the node owning them.
 <p>Verify the RAID group and drives of your new aggregate:</p>
 <div class="paragraph">
 <p><code>storage aggregate show-status -aggregate <em>aggregate-name</em></code></p>
-</div>
-</li>
-<li>
-<p>Disable unmirrored aggregate deployment:</p>
-<div class="paragraph">
-<p><code>metrocluster modify -enable-unmirrored-aggr-deployment false</code></p>
-</div>
-</li>
-<li>
-<p>Verify that disk auto-assignment is enabled:</p>
-<div class="paragraph">
-<p><code>disk option show</code></p>
 </div>
 </li>
 </ol>

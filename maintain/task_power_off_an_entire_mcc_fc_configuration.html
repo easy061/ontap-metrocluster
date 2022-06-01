@@ -1719,8 +1719,6 @@
 
 
 
-
-
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
@@ -3381,10 +3379,8 @@
         Send a custom AutoSupport message prior to negotiated switchover
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/manage/task_perform_a_negotiated_switchover.html">
         Perform a negotiated switchover
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/manage/concept_output_for_storage_aggregate_plex_show_after_a_mcc_switchover.html">
-        Output for the storage aggregate plex show command is indeterminate after a MetroCluster switchover
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/manage/task_confirm_that_dr_partners_have_come_online.html">
-        Confirm that the DR partners have come online
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/manage/task_verify_SVMs are_running_and_aggregates_are_online.html">
+        Verify that the SVMs are running and the aggregates are online
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Heal the configuration</div>
       </a>
@@ -3897,24 +3893,24 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-03 22:01:55 +0000">02/03/2022</time>
+    <time datetime="2022-05-30 14:54:35 +0000">05/30/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-folivia">
+    <img  class="avatar avatar-small"
+          alt="netapp-folivia"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/91882669?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/54111336?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ivanad">
-    <img  class="avatar avatar-small"
-          alt="netapp-ivanad"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/76115643?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -4015,23 +4011,19 @@ Beginning with ONTAP 9.8, the <code><strong>storage switch</strong></code> comma
 </div>
 </li>
 <li>
-<p>Halt the nodes by using the following command:</p>
-<div class="paragraph">
-<p><code><strong>halt</strong></code>
- <strong>* For a four-node or eight-node MetroCluster configuration, use the parameter
-<br>
-<code>*inhibit-takeover</strong></code></p>
-</div>
-<div class="paragraph">
-<p>+</p>
-</div>
+<p>Halt the nodes by using the following command:
+<code><strong>halt</strong></code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>For a four-node or eight-node MetroCluster configuration, use the parameter:
+<code><strong>inhibit-takeover</strong></code></p>
 <div class="listingblock">
 <div class="content">
 <pre>system node halt -node node1_SiteA -inhibit-takeover true -ignore-quorum-warnings true</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>For a two-node MetroCluster configuration, use the command:</p>
 <div class="listingblock">
@@ -4051,7 +4043,7 @@ Beginning with ONTAP 9.8, the <code><strong>storage switch</strong></code> comma
 <p>Storage controllers</p>
 </li>
 <li>
-<p>MetroCluster FC switches</p>
+<p>MetroCluster FC switches (if in use and the configuration is not a a two-node stretch configuration)</p>
 </li>
 <li>
 <p>ATTO FibreBridges</p>
@@ -4063,7 +4055,23 @@ Beginning with ONTAP 9.8, the <code><strong>storage switch</strong></code> comma
 </div>
 </li>
 <li>
-<p>Wait for thirty minutes and then power on all the controllers.</p>
+<p>Wait for thirty minutes and then power on the following equipment at the site:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Storage shelves</p>
+</li>
+<li>
+<p>ATTO FibreBridges</p>
+</li>
+<li>
+<p>MetroCluster FC switches</p>
+</li>
+<li>
+<p>Storage controllers</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>After the controllers are powered on, verify the MetroCluster configuration from both sites.</p>
