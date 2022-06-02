@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Workflow for disaster recovery</title>
+  <title>Unconfigure the ONTAP Mediator service from the MetroCluster IP configuration</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Workflow for disaster recovery" />
+  <meta property="og:title" content="Unconfigure the ONTAP Mediator service from the MetroCluster IP configuration" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_dr_workflow.html" />
-	<meta property="og:description" content="Use the workflow to perform disaster recovery." />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_remove_unconfigure_mediator.html" />
+	<meta property="og:description" content="You can remove the ONTAP mediator service from the MetroCluster IP configuration." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap-metrocluster/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Use the workflow to perform disaster recovery.">
-  <meta name="keywords" content=" workflow, perform, disaster, recovery"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can remove the ONTAP mediator service from the MetroCluster IP configuration.">
+  <meta name="keywords" content=" ontap, mediator, service, assist, remove, unconfigure, requirements, mediator requirements"><!-- Icons -->
   <link rel="icon" href="/us-en/ontap-metrocluster/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap-metrocluster/issues/new?body=Page%3A%20[Workflow for disaster recovery](https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_dr_workflow.html)" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap-metrocluster/images/discuss-sm.svg" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap-metrocluster/blob/main/disaster-recovery/concept_dr_workflow.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap-metrocluster/images/edit-sm.svg" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap-metrocluster/images/article-sm.svg" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap-metrocluster/issues/new?body=Page%3A%20[Unconfigure the ONTAP Mediator service from the MetroCluster IP configuration](https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_remove_unconfigure_mediator.html)" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap-metrocluster/images/discuss-sm.svg" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap-metrocluster/blob/main/install-ip/task_remove_unconfigure_mediator.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap-metrocluster/images/edit-sm.svg" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap-metrocluster/images/article-sm.svg" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -292,15 +292,15 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_dr_workflow.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_remove_unconfigure_mediator.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-metrocluster/disaster-recovery/concept_dr_workflow.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/ontap-metrocluster/install-ip/task_remove_unconfigure_mediator.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-metrocluster/disaster-recovery/concept_dr_workflow.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/ontap-metrocluster/install-ip/task_remove_unconfigure_mediator.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-metrocluster/disaster-recovery/concept_dr_workflow.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/ontap-metrocluster/install-ip/task_remove_unconfigure_mediator.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/ontap-metrocluster/disaster-recovery/concept_dr_workflow.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
+                  <a href="https://docs.netapp.com/zh-tw/ontap-metrocluster/install-ip/task_remove_unconfigure_mediator.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -1308,6 +1308,15 @@
 
 
 
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/us-en/ontap-metrocluster/pdfs/pages/install-ip/task_remove_unconfigure_mediator.pdf" >
+    <img src="/us-en/ontap-metrocluster/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
 
 
 
@@ -2697,15 +2706,6 @@
             Recover from a disaster
           </a>
           
-    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/us-en/ontap-metrocluster/pdfs/pages/disaster-recovery/concept_dr_workflow.pdf" >
-    <img src="/us-en/ontap-metrocluster/images/pdf.png" width="16" height="16"/>
-    PDF of this page
-  </a>
-</li>
-
-</ul>
-  
 
 
 
@@ -3237,7 +3237,7 @@
         Prepare to install the ONTAP Mediator service
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/install-ip/task_configuring_the_ontap_mediator_service_from_a_metrocluster_ip_configuration.html">
         Configuring the ONTAP Mediator service from a MetroCluster IP configuration
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/install-ip/task_remove_unconfigure_mediator.html">
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/install-ip/task_remove_unconfigure_mediator.html">
         Unconfigure the ONTAP Mediator service from the MetroCluster IP configuration
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/install-ip/task_connecting_mcc_to_different_mediator_instance.html">
         Connect a MetroCluster configuration to a different ONTAP Mediator instance
@@ -3781,7 +3781,7 @@
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Recover from a disaster</div>
       </a>
-      <ul><li class="  active "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/disaster-recovery/concept_dr_workflow.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/disaster-recovery/concept_dr_workflow.html">
         Workflow for disaster recovery
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/disaster-recovery/task_perform_a_forced_switchover_after_a_disaster.html">
         Perform a forced switchover after a disaster
@@ -3890,31 +3890,23 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Workflow for disaster recovery</h1>
+  <h1 class="n-doc__component-detail-heading">Unconfigure the ONTAP Mediator service from the MetroCluster IP configuration</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2021-04-03 05:53:34 +0000">04/03/2021</time>
+    <time datetime="2022-05-18 13:34:09 +0000">05/18/2022</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-martyh">
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
     <img  class="avatar avatar-small"
-          alt="netapp-martyh"
+          alt="netapp-aoife"
           width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/66496079?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/NetAppZacharyWambold">
-    <img  class="avatar avatar-small"
-          alt="NetAppZacharyWambold"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/73244192?v=4"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -3924,12 +3916,44 @@
 </p>
 
 <div class="paragraph lead">
-<p>Use the workflow to perform disaster recovery.</p>
+<p>You can unconfigure the ONTAP Mediator service from the MetroCluster IP configuration.</p>
 </div>
-<div class="imageblock">
+<div class="paragraph">
+<div class="title">Before you begin</div>
+<p>You must have successfully installed and configured the ONTAP Mediator on a network location that can be reached by both MetroCluster sites.</p>
+</div>
+<div class="paragraph">
+<div class="title">About this task</div>
+<p>You must perform this task on both clusters in the MetroCluster IP configuration.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Unconfigure the ONTAP Mediator service by using the following command:</p>
+<div class="paragraph">
+<p><code>metrocluster configuration-settings mediator remove</code></p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Check if there are any broken disks by using the following command:</p>
+<div class="paragraph">
+<p><code>disk show -broken</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong></p>
+</div>
+<div class="literalblock">
 <div class="content">
-<img src="../media/workflow_disaster_recovery.svg" alt="workflow disaster recovery">
+<pre>There are no entries matching your query.</pre>
 </div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 
     </article>
