@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Applying the RCF files and recabling the switches</title>
+  <title>Recable and reconfigure the switches</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Applying the RCF files and recabling the switches" />
+  <meta property="og:title" content="Recable and reconfigure the switches" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_apply_the_rcf_files_and_recable_the_switches.html" />
 	<meta property="og:description" content="You must apply the RCF files to reconfigure your zoning to accommodate the new nodes." />
@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap-metrocluster/issues/new?body=Page%3A%20[Applying the RCF files and recabling the switches](https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_apply_the_rcf_files_and_recable_the_switches.html)" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap-metrocluster/images/discuss-sm.svg" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap-metrocluster/blob/main/upgrade/task_apply_the_rcf_files_and_recable_the_switches.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap-metrocluster/images/edit-sm.svg" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap-metrocluster/images/article-sm.svg" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap-metrocluster/issues/new?body=Page%3A%20[Recable and reconfigure the switches](https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_apply_the_rcf_files_and_recable_the_switches.html)" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap-metrocluster/images/discuss-sm.svg" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/ontap-metrocluster/blob/main/upgrade/task_recable_and_reconfigure_the_switches.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap-metrocluster/images/edit-sm.svg" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap-metrocluster/images/article-sm.svg" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">English</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">English</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-metrocluster/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_apply_the_rcf_files_and_recable_the_switches.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-metrocluster/upgrade/task_apply_the_rcf_files_and_recable_the_switches.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-metrocluster/upgrade/task_apply_the_rcf_files_and_recable_the_switches.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-metrocluster/upgrade/task_apply_the_rcf_files_and_recable_the_switches.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/ontap-metrocluster/upgrade/task_apply_the_rcf_files_and_recable_the_switches.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_apply_the_rcf_files_and_recable_the_switches.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/ontap-metrocluster/upgrade/task_apply_the_rcf_files_and_recable_the_switches.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/ontap-metrocluster/upgrade/task_apply_the_rcf_files_and_recable_the_switches.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/ontap-metrocluster/upgrade/task_apply_the_rcf_files_and_recable_the_switches.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/ontap-metrocluster/upgrade/task_apply_the_rcf_files_and_recable_the_switches.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -2886,7 +2878,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/index.html">
         MetroCluster
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/releasenotes.html">
@@ -3730,7 +3722,7 @@
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_disconnect_the_exist_dr_group_mcc_expansion.html">
         Disconnect the existing DR group from the fabric
       </a></li><li class="  active "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_apply_the_rcf_files_and_recable_the_switches.html">
-        Apply the RCF files and recable the switches
+        Recable and reconfigure the switches
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Configure ONTAP on the new controllers</div>
       </a>
@@ -3890,31 +3882,23 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Applying the RCF files and recabling the switches</h1>
+  <h1 class="n-doc__component-detail-heading">Recable and reconfigure the switches</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-02-03 22:01:55 +0000">02/03/2022</time>
+    <time datetime="2022-06-08 09:37:14 +0000">06/08/2022</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-folivia">
     <img  class="avatar avatar-small"
-          alt="netapp-thomi"
+          alt="netapp-folivia"
           width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/54111336?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-martyh">
-    <img  class="avatar avatar-small"
-          alt="netapp-martyh"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/66496079?v=4"
+          src="https://avatars.githubusercontent.com/u/91882669?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -3925,6 +3909,19 @@
 
 <div class="paragraph lead">
 <p>You must apply the RCF files to reconfigure your zoning to accommodate the new nodes.</p>
+</div>
+<div class="paragraph">
+<p>If you cannot use the RCF files to configure the switches, you must configure the switches manually. See:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../install-fc/task_fcsw_brocade_configure_the_brocade_fc_switches_supertask.html">Configure the Brocade FC switches manually</a></p>
+</li>
+<li>
+<p><a href="../install-fc/task_fcsw_cisco_configure_a_cisco_switch_supertask.html">Configure the Cisco FC switches manually</a></p>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
@@ -3948,18 +3945,6 @@
 <p>Cable both the pre-existing and the new FC-to-SAS bridges to the FC switches, using the cabling layout you created previously.</p>
 <div class="paragraph">
 <p>The FC switch port usage must match the MetroCluster eight-node usage described in <a href="../install-fc/index.html">Fabric-attached MetroCluster installation and configuration</a> so that the Reference Configuration Files (RCFs) can be used.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap-metrocluster/images/note.svg" alt="Note">
-</td>
-<td class="content">
-If your environment cannot be cabled in such a way that RCF files can be used then contact technical support. Do NOT use this procedure if the cabling cannot use RCF files.
-</td>
-</tr>
-</table>
 </div>
 </li>
 <li>
@@ -3997,18 +3982,6 @@ If your environment cannot be cabled in such a way that RCF files can be used th
 <p>Use the procedure in <a href="../install-fc/index.html">Fabric-attached MetroCluster installation and configuration</a> to cable the FC-VI ports from the existing and new controllers, using the cabling layout you created previously.</p>
 <div class="paragraph">
 <p>The FC switch port usage must match the MetroCluster eight-node usage described in <a href="../install-fc/index.html">Fabric-attached MetroCluster installation and configuration</a> so that the Reference Configuration Files (RCFs) can be used.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap-metrocluster/images/note.svg" alt="Note">
-</td>
-<td class="content">
-If your environment cannot be cabled in such a way that RCF files can be used then contact technical support. Do NOT use this procedure if the cabling cannot use RCF files.
-</td>
-</tr>
-</table>
 </div>
 </li>
 <li>
@@ -4192,4 +4165,5 @@ If your environment cannot be cabled in such a way that RCF files can be used th
     </script>
     <script src='/us-en/ontap-metrocluster/js/www-ntap.js'></script>
     <script src='/us-en/ontap-metrocluster/js/tabbed-blocks.js'></script>
+    <script src='/us-en/ontap-metrocluster/js/sidebar.js'></script>
   </body></html>
