@@ -3472,13 +3472,13 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_fc_mcc_us_switchover_and_switchback_mcc_fc_4n_cu.html">
         Upgrade controllers in a MetroCluster FC configuration using switchover and switchback
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_A700_to_A900_in_a_four_node_mcc_fc_us_switchover_and_switchback.html">
-        Upgrade controllers from AFF A700 to AFF A900 in a MetroCluster FC configuration using switchover and switchback (ONTAP 9.10.1 and later)
+        Upgrade controllers from AFF A700/A900 to FAS9x00 in a MetroCluster FC configuration using switchover and switchback (ONTAP 9.10.1 or later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_system_control_commands_in_a_four_node_mcc_fc.html">
         Upgrade controllers in a four-node MetroCluster FC configuration using switchover and switchback with "system controller replace" commands (ONTAP 9.10.1 and later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_ip_mcc_us_switchover_and_switchback_mcc_ip.html">
         Upgrade controllers in a MetroCluster IP configuration using switchover and   switchback (ONTAP 9.8 and later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_A700_to_A900_in_a_four_node_mcc_ip_us_switchover_and_switchback.html">
-        Upgrade controllers from AFF A700 to AFF A900 in a MetroCluster IP configuration using switchover and switchback (ONTAP 9.10.1 and later)
+        Upgrade controllers from AFF A700/A900 to FAS9x00 in a MetroCluster IP configuration using switchover and switchback  (ONTAP 9.10.1 or later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_refresh_4n_mcc_fc.html">
         Refreshing a four-node MetroCluster FC configuration
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_refresh_4n_mcc_ip.html">
@@ -3743,11 +3743,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-24 21:09:02 +0000">06/24/2021</time>
+    <time datetime="2022-06-29 08:42:40 +0000">06/29/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-folivia">
+    <img  class="avatar avatar-small"
+          alt="netapp-folivia"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/91882669?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -3769,6 +3777,8 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
 <p>You must boot the replacement nodes at the disaster site to the ONTAP operating system.</p>
 </div>
@@ -3797,7 +3807,7 @@
 <img src="/us-en/ontap-metrocluster/images/note.svg" alt="Note">
 </td>
 <td class="content">
-If you did not clear the NVRAM contents of a used replacement controller module, then you might see the following panic message: <code>PANIC: NVRAM contents are invalid&#8230;&#8203;.</code>  If this occurs, boot the system to the ONTAP prompt again (<code>boot_ontap menu</code>). You then need to perform a root recovery. Contact technical support for assistance.
+If you did not clear the NVRAM contents of a used replacement controller module, then you might see the following panic message: <code>PANIC: NVRAM contents are invalid&#8230;&#8203;.</code>  If this occurs, boot the system to the ONTAP prompt again (<code>boot_ontap menu</code>). You then need to <a href="#Reset-the-boot-recovery">Reset the boot_recovery and rdb_corrupt bootargs</a>
 </td>
 </tr>
 </table>
@@ -4004,6 +4014,47 @@ cluster_B::*&gt;</pre>
 <p>Repeat the previous steps on the other node at the disaster site.</p>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="reset-the-boot_recovery-and-rdb_corrupt-bootargs"><a id="Reset-the-boot-recovery"></a>Reset the boot_recovery and rdb_corrupt bootargs</h3>
+<div class="paragraph lead">
+<p>If required, you can reset the boot_recovery and rdb_corrupt_bootargs</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Halt the node back to the LOADER prompt:</p>
+<div class="listingblock">
+<div class="content">
+<pre>node_A_1::*&gt; halt -node _node-name_</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Check if the following bootargs have been set:</p>
+<div class="listingblock">
+<div class="content">
+<pre>LOADER&gt; printenv bootarg.init.boot_recovery
+LOADER&gt; printenv bootarg.rdb_corrupt</pre>
+</div>
+</div>
+</li>
+<li>
+<p>If either bootarg has been set to a value, unset it and boot ONTAP:</p>
+<div class="listingblock">
+<div class="content">
+<pre>LOADER&gt; unsetenv bootarg.init.boot_recovery
+LOADER&gt; unsetenv bootarg.rdb_corrupt
+LOADER&gt; saveenv
+LOADER&gt; bye</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
 </div>
 
     </article>

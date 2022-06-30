@@ -3472,13 +3472,13 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_fc_mcc_us_switchover_and_switchback_mcc_fc_4n_cu.html">
         Upgrade controllers in a MetroCluster FC configuration using switchover and switchback
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_A700_to_A900_in_a_four_node_mcc_fc_us_switchover_and_switchback.html">
-        Upgrade controllers from AFF A700 to AFF A900 in a MetroCluster FC configuration using switchover and switchback (ONTAP 9.10.1 and later)
+        Upgrade controllers from AFF A700/A900 to FAS9x00 in a MetroCluster FC configuration using switchover and switchback (ONTAP 9.10.1 or later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_system_control_commands_in_a_four_node_mcc_fc.html">
         Upgrade controllers in a four-node MetroCluster FC configuration using switchover and switchback with "system controller replace" commands (ONTAP 9.10.1 and later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_ip_mcc_us_switchover_and_switchback_mcc_ip.html">
         Upgrade controllers in a MetroCluster IP configuration using switchover and   switchback (ONTAP 9.8 and later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_A700_to_A900_in_a_four_node_mcc_ip_us_switchover_and_switchback.html">
-        Upgrade controllers from AFF A700 to AFF A900 in a MetroCluster IP configuration using switchover and switchback (ONTAP 9.10.1 and later)
+        Upgrade controllers from AFF A700/A900 to FAS9x00 in a MetroCluster IP configuration using switchover and switchback  (ONTAP 9.10.1 or later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_refresh_4n_mcc_fc.html">
         Refreshing a four-node MetroCluster FC configuration
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_refresh_4n_mcc_ip.html">
@@ -3743,11 +3743,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-03 22:01:55 +0000">02/03/2022</time>
+    <time datetime="2022-06-29 10:42:17 +0000">06/29/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -3790,17 +3798,8 @@ Aggregate     Size Available Used% State   #Vols  Nodes            RAID Status
 ...
 aggr_b2    227.1GB   227.1GB    0% online       0 node_B_2   raid_dp,
                                                                    mirrored,
-                                                                   normal
-
-node_A_1::&gt; aggr show
-Aggregate     Size Available Used% State   #Vols  Nodes            RAID Status
---------- -------- --------- ----- ------- ------ ---------------- ------------
-...
-aggr_b2          -         -     - unknown      - node_A_1</pre>
+                                                                   normal</pre>
 </div>
-</div>
-<div class="paragraph">
-<p>If the disaster site included unmirrored aggregates and the unmirrored aggregates are no longer present, the aggregate might show up with a state of &#8220;unknown&#8221; in the output of the <code>storage aggregate show</code> command. Contact technical support to remove the out-of-date entries for the unmirrored aggregates.</p>
 </div>
 </li>
 <li>

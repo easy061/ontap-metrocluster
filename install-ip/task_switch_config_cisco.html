@@ -3472,13 +3472,13 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_fc_mcc_us_switchover_and_switchback_mcc_fc_4n_cu.html">
         Upgrade controllers in a MetroCluster FC configuration using switchover and switchback
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_A700_to_A900_in_a_four_node_mcc_fc_us_switchover_and_switchback.html">
-        Upgrade controllers from AFF A700 to AFF A900 in a MetroCluster FC configuration using switchover and switchback (ONTAP 9.10.1 and later)
+        Upgrade controllers from AFF A700/A900 to FAS9x00 in a MetroCluster FC configuration using switchover and switchback (ONTAP 9.10.1 or later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_system_control_commands_in_a_four_node_mcc_fc.html">
         Upgrade controllers in a four-node MetroCluster FC configuration using switchover and switchback with "system controller replace" commands (ONTAP 9.10.1 and later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_ip_mcc_us_switchover_and_switchback_mcc_ip.html">
         Upgrade controllers in a MetroCluster IP configuration using switchover and   switchback (ONTAP 9.8 and later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_A700_to_A900_in_a_four_node_mcc_ip_us_switchover_and_switchback.html">
-        Upgrade controllers from AFF A700 to AFF A900 in a MetroCluster IP configuration using switchover and switchback (ONTAP 9.10.1 and later)
+        Upgrade controllers from AFF A700/A900 to FAS9x00 in a MetroCluster IP configuration using switchover and switchback  (ONTAP 9.10.1 or later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_refresh_4n_mcc_fc.html">
         Refreshing a four-node MetroCluster FC configuration
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_refresh_4n_mcc_ip.html">
@@ -3743,7 +3743,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-08 10:05:04 +0000">06/08/2022</time>
+    <time datetime="2022-06-29 09:42:20 +0000">06/29/2022</time>
     
   
 
@@ -4282,6 +4282,18 @@ IP_switch_A_1#</pre>
 <ol class="arabic">
 <li>
 <p>Download the MetroCluster IP RCF files.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-metrocluster/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Modifications to the RCF files after download are not supported.
+</td>
+</tr>
+</table>
+</div>
 </li>
 <li>
 <p>Copy the RCF files to the switches:</p>

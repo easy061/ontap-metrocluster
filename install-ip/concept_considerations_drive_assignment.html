@@ -3472,13 +3472,13 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_fc_mcc_us_switchover_and_switchback_mcc_fc_4n_cu.html">
         Upgrade controllers in a MetroCluster FC configuration using switchover and switchback
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_A700_to_A900_in_a_four_node_mcc_fc_us_switchover_and_switchback.html">
-        Upgrade controllers from AFF A700 to AFF A900 in a MetroCluster FC configuration using switchover and switchback (ONTAP 9.10.1 and later)
+        Upgrade controllers from AFF A700/A900 to FAS9x00 in a MetroCluster FC configuration using switchover and switchback (ONTAP 9.10.1 or later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_system_control_commands_in_a_four_node_mcc_fc.html">
         Upgrade controllers in a four-node MetroCluster FC configuration using switchover and switchback with "system controller replace" commands (ONTAP 9.10.1 and later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_ip_mcc_us_switchover_and_switchback_mcc_ip.html">
         Upgrade controllers in a MetroCluster IP configuration using switchover and   switchback (ONTAP 9.8 and later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_A700_to_A900_in_a_four_node_mcc_ip_us_switchover_and_switchback.html">
-        Upgrade controllers from AFF A700 to AFF A900 in a MetroCluster IP configuration using switchover and switchback (ONTAP 9.10.1 and later)
+        Upgrade controllers from AFF A700/A900 to FAS9x00 in a MetroCluster IP configuration using switchover and switchback  (ONTAP 9.10.1 or later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_refresh_4n_mcc_fc.html">
         Refreshing a four-node MetroCluster FC configuration
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_refresh_4n_mcc_ip.html">
@@ -3743,24 +3743,24 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-05 13:39:19 +0000">05/05/2022</time>
+    <time datetime="2022-06-22 08:29:12 +0000">06/22/2022</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-martyh">
-    <img  class="avatar avatar-small"
-          alt="netapp-martyh"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/66496079?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-folivia">
     <img  class="avatar avatar-small"
           alt="netapp-folivia"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/91882669?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-martyh">
+    <img  class="avatar avatar-small"
+          alt="netapp-martyh"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/66496079?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -4878,6 +4878,53 @@ Half of the internal drives remain unassigned before MetroCluster is configured.
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The drives on the shelves are divided into two equal groups (halves). Each half-shelf is automatically assigned to a separate pool.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Minimum supported drives (per site) (active/passive HA configuration)</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="disk-assignment-on-fas9500-systems">Disk assignment on FAS9500 systems</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Guideline</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Shelves per site</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Drive assignment rules</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">ADP layout for root partition</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Minimum recommended drives (per site)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>96 drives</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Drives are automatically assigned on a shelf-by-shelf basis.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Not applicable</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Minimum supported drives (per site)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>24 drives</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The drives are divided into four equal groups (quarters). Each quarter-shelf is automatically assigned to a separate pool.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Minimum supported drives (per site) (active/passive HA configuration)</p>
