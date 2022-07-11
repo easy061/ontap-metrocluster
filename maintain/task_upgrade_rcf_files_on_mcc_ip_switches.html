@@ -3743,11 +3743,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-10 10:55:15 +0000">05/10/2022</time>
+    <time datetime="2022-07-04 14:09:17 +0000">07/04/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-folivia">
+    <img  class="avatar avatar-small"
+          alt="netapp-folivia"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/91882669?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-martyh">
     <img  class="avatar avatar-small"
           alt="netapp-martyh"
@@ -3944,19 +3952,33 @@ volumes             ok
 </div>
 </li>
 <li>
-<p>Download and install the IP RCF file, depending on your switch vendor:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../install-ip/task_switch_config_broadcom.html#downloading-and-installing-the-broadcom-rcf-files">Downloading and installing the Broadcom IP RCF files</a></p>
+<p>Download and install the IP RCF file, depending on your switch vendor.</p>
 </li>
-<li>
-<p><a href="../install-ip/task_switch_config_cisco.html#downloading-and-installing-the-cisco-ip-rcf-files">Downloading and installing the Cisco IP RCF files</a></p>
-</li>
-</ul>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-metrocluster/images/note.svg" alt="Note">
+</td>
+<td class="content">
+If you have an L2 shared or L3 network configuration, you might need to adjust the ISL ports on the intermediate/customer switches. The switchport mode might change from 'access' to 'trunk' mode. Only proceed to upgrade the second switch pair (A_2, B_2) if the network connectivity between switches A_1 and B_1 is fully operational and the network is healthy.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>Update the switches in the following order:</p>
+<p>+
+* <a href="../install-ip/task_switch_config_broadcom.html#downloading-and-installing-the-broadcom-rcf-files">Downloading and installing the Broadcom IP RCF files</a></p>
+</div>
+<div class="paragraph">
+<p>+
+* <a href="../install-ip/task_switch_config_cisco.html#downloading-and-installing-the-cisco-ip-rcf-files">Downloading and installing the Cisco IP RCF files</a></p>
+</div>
+<div class="paragraph">
+<p>+
+Update the switches in the following order:</p>
 </div>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
@@ -3974,8 +3996,8 @@ volumes             ok
 </li>
 </ol>
 </div>
-</li>
-</ol>
+<div class="paragraph">
+<p>GitHub issue 135, July 4th 2022</p>
 </div>
 </div>
 </div>

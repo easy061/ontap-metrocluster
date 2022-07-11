@@ -3743,7 +3743,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-30 14:54:35 +0000">05/30/2022</time>
+    <time datetime="2022-07-11 13:40:29 +0000">07/11/2022</time>
     
   
 
@@ -3823,7 +3823,7 @@ This procedure is for use in both MetroCluster IP and FC configurations.
 </div>
 <div class="paragraph">
 <div class="title">About this task</div>
-<p>All the commands in the following steps are issued from the site that you want to power off.</p>
+<p>All the commands in the following steps are issued from the site to remain powered on.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
@@ -3883,9 +3883,14 @@ This procedure is for use in both MetroCluster IP and FC configurations.
 </div>
 </li>
 <li>
-<p>Enter the following command to implement the switchover:</p>
+<p>From the site you want to remain up implement the switchover:</p>
 <div class="paragraph">
 <p><code>metrocluster switchover</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster_A::*&gt; metrocluster switchover</pre>
+</div>
 </div>
 <div class="paragraph">
 <p>The operation can take several minutes to complete.</p>
@@ -3925,6 +3930,37 @@ cluster_A::*&gt; metrocluster operation show
 <p>If you have a MetroCluster IP configuration running ONTAP 9.6 or later, wait for the disaster site plexes to come online and the healing operations to automatically complete.</p>
 <div class="paragraph">
 <p>In MetroCluster IP configurations running earlier versions of ONTAP, the disaster site nodes do not automatically boot to ONTAP and the plexes remain offline. For MetroCluster FC configurations, all plexes remain online and you do not need to online the plexes.</p>
+</div>
+</li>
+<li>
+<p>Move volumes and LUNs offline.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Move volumes offline.</p>
+<div class="listingblock">
+<div class="content">
+<pre>cluster_A::* volume offline &lt;volume name&gt;</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Move LUNs offline.</p>
+<div class="listingblock">
+<div class="content">
+<pre>cluster_A::* lun offline lun_path &lt;lun_path&gt;</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Move unmirrored aggregates offline: <code>storage aggregate offline</code></p>
+<div class="listingblock">
+<div class="content">
+<pre>cluster_A*::&gt; storage aggregate offline -aggregate &lt;aggregate-name&gt;</pre>
+</div>
 </div>
 </li>
 <li>
