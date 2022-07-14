@@ -3745,11 +3745,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-04-12 06:37:04 +0000">04/12/2021</time>
+    <time datetime="2022-07-01 15:27:49 +0000">07/01/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -3841,7 +3849,147 @@ FC_switch_A_1# copy ftp://10.10.10.55/firmware/m9200-s2ek9-mz.5.2.1.bin bootflas
 </div>
 </li>
 <li>
-<p>Disable all the VSANs on both the switches in this fabric.</p>
+<p>Disable all of the VSANs on both of the switches in this fabric.</p>
+<div class="paragraph">
+<p>Use the following procedure to disable the VSANs:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Open the config terminal:</p>
+<div class="paragraph">
+<p><code><strong>config t</strong></code></p>
+</div>
+</li>
+<li>
+<p>Enter: <code><strong>vsan database</strong></code></p>
+</li>
+<li>
+<p>Check the state of the VSANs:</p>
+<div class="paragraph">
+<p><code><strong>show vsan</strong></code></p>
+</div>
+<div class="paragraph">
+<p>All VSANs must be active.</p>
+</div>
+</li>
+<li>
+<p>Suspend the VSANs:</p>
+<div class="paragraph">
+<p><code><strong>vsan <em>vsan-num</em> suspend</strong></code></p>
+</div>
+<div class="paragraph">
+<p><strong>Example:</strong> <code>vsan 10 suspend</code></p>
+</div>
+</li>
+<li>
+<p>Check the state of the VSANs again:</p>
+<div class="paragraph">
+<p><code><strong>show vsan</strong></code>
+<br>
+All VSANs must be suspended.</p>
+</div>
+</li>
+<li>
+<p>Exit the config terminal:</p>
+<div class="paragraph">
+<p><code><strong>end</strong></code></p>
+</div>
+</li>
+<li>
+<p>Save the configuration.</p>
+<div class="paragraph">
+<p><code><strong>copy running-config startup-config</strong></code></p>
+</div>
+<div class="paragraph">
+<p>The following example displays the output for FC_switch_A_1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>FC_switch_A_1# config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+FC_switch_A_1(config)# vsan database
+FC_switch_A_1(config-vsan-db)# show vsan
+vsan 1 information
+         name:VSAN0001  state:active
+         interoperability mode:default
+         loadbalancing:src-id/dst-id/oxid
+         operational state:up
+
+vsan 30 information
+         name:MC1_FCVI_2_30  state:active
+         interoperability mode:default
+         loadbalancing:src-id/dst-id
+         operational state:up
+
+vsan 40 information
+         name:MC1_STOR_2_40  state:active
+         interoperability mode:default
+         loadbalancing:src-id/dst-id/oxid
+         operational state:up
+
+vsan 70 information
+         name:MC2_FCVI_2_70  state:active
+         interoperability mode:default
+         loadbalancing:src-id/dst-id
+         operational state:up
+
+vsan 80 information
+         name:MC2_STOR_2_80  state:active
+         interoperability mode:default
+         loadbalancing:src-id/dst-id/oxid
+         operational state:up
+
+vsan 4079:evfp_isolated_vsan
+
+vsan 4094:isolated_vsan
+
+FC_switch_A_1(config-vsan-db)# vsan 1 suspend
+FC_switch_A_1(config-vsan-db)# vsan 30 suspend
+FC_switch_A_1(config-vsan-db)# vsan 40 suspend
+FC_switch_A_1(config-vsan-db)# vsan 70 suspend
+FC_switch_A_1(config-vsan-db)# vsan 80 suspend
+FC_switch_A_1(config-vsan-db)# end
+FC_switch_A_1#
+FC_switch_A_1# show vsan
+vsan 1 information
+         name:VSAN0001  state:suspended
+         interoperability mode:default
+         loadbalancing:src-id/dst-id/oxid
+         operational state:down
+
+vsan 30 information
+         name:MC1_FCVI_2_30  state:suspended
+         interoperability mode:default
+         loadbalancing:src-id/dst-id
+         operational state:down
+
+vsan 40 information
+         name:MC1_STOR_2_40  state:suspended
+         interoperability mode:default
+         loadbalancing:src-id/dst-id/oxid
+         operational state:down
+
+vsan 70 information
+         name:MC2_FCVI_2_70  state:suspended
+         interoperability mode:default
+         loadbalancing:src-id/dst-id
+         operational state:down
+
+vsan 80 information
+         name:MC2_STOR_2_80  state:suspended
+         interoperability mode:default
+         loadbalancing:src-id/dst-id/oxid
+         operational state:down
+
+vsan 4079:evfp_isolated_vsan
+
+vsan 4094:isolated_vsan</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
 </li>
 <li>
 <p>Install the desired firmware on the switches:</p>
@@ -3865,41 +4013,190 @@ Enter Yes to confirm the installation.</pre>
 </div>
 </li>
 <li>
-<p>Enable all the VSANs on both the switches in this fabric.</p>
+<p>Enable all of the VSANs on both of the switches in this fabric.</p>
+<div class="paragraph">
+<p>Use the following procedure to enable the VSANs:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Open the config terminal:</p>
+<div class="paragraph">
+<p><code><strong>config t</strong></code></p>
+</div>
+</li>
+<li>
+<p>Enter: <code><strong>vsan database</strong></code></p>
+</li>
+<li>
+<p>Check the state of the VSANs:</p>
+<div class="paragraph">
+<p><code><strong>show vsan</strong></code></p>
+</div>
+<div class="paragraph">
+<p>The VSANs must be suspended.</p>
+</div>
+</li>
+<li>
+<p>Activate the VSANs:</p>
+<div class="paragraph">
+<p><code><strong>no vsan <em>vsan-num</em> suspend</strong></code></p>
+</div>
+<div class="paragraph">
+<p><strong>Example:</strong> <code>no vsan 10 suspend</code></p>
+</div>
+</li>
+<li>
+<p>Check the state of the VSANs again:</p>
+<div class="paragraph">
+<p><code><strong>show vsan</strong></code></p>
+</div>
+<div class="paragraph">
+<p>All VSANs must be active.</p>
+</div>
+</li>
+<li>
+<p>Exit the config terminal:</p>
+<div class="paragraph">
+<p><code><strong>end</strong></code></p>
+</div>
+</li>
+<li>
+<p>Save the configuration:</p>
+<div class="paragraph">
+<p><code><strong>copy running-config startup-config</strong></code></p>
+</div>
+<div class="paragraph">
+<p>The following example displays the output for FC_switch_A_1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>FC_switch_A_1# config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+FC_switch_A_1(config)# vsan database
+FC_switch_A_1(config-vsan-db)# show vsan
+vsan 1 information
+         name:VSAN0001  state:suspended
+         interoperability mode:default
+         loadbalancing:src-id/dst-id/oxid
+         operational state:down
+
+vsan 30 information
+         name:MC1_FCVI_2_30  state:suspended
+         interoperability mode:default
+         loadbalancing:src-id/dst-id
+         operational state:down
+
+vsan 40 information
+         name:MC1_STOR_2_40  state:suspended
+         interoperability mode:default
+         loadbalancing:src-id/dst-id/oxid
+         operational state:down
+
+vsan 70 information
+         name:MC2_FCVI_2_70  state:suspended
+         interoperability mode:default
+         loadbalancing:src-id/dst-id
+         operational state:down
+
+vsan 80 information
+         name:MC2_STOR_2_80  state:suspended
+         interoperability mode:default
+         loadbalancing:src-id/dst-id/oxid
+         operational state:down
+
+vsan 4079:evfp_isolated_vsan
+
+vsan 4094:isolated_vsan
+
+FC_switch_A_1(config-vsan-db)# no vsan 1 suspend
+FC_switch_A_1(config-vsan-db)# no vsan 30 suspend
+FC_switch_A_1(config-vsan-db)# no vsan 40 suspend
+FC_switch_A_1(config-vsan-db)# no vsan 70 suspend
+FC_switch_A_1(config-vsan-db)# no vsan 80 suspend
+FC_switch_A_1(config-vsan-db)#
+FC_switch_A_1(config-vsan-db)# show vsan
+vsan 1 information
+         name:VSAN0001  state:active
+         interoperability mode:default
+         loadbalancing:src-id/dst-id/oxid
+         operational state:up
+
+vsan 30 information
+         name:MC1_FCVI_2_30  state:active
+         interoperability mode:default
+         loadbalancing:src-id/dst-id
+         operational state:up
+
+vsan 40 information
+         name:MC1_STOR_2_40  state:active
+         interoperability mode:default
+         loadbalancing:src-id/dst-id/oxid
+         operational state:up
+
+vsan 70 information
+         name:MC2_FCVI_2_70  state:active
+         interoperability mode:default
+         loadbalancing:src-id/dst-id
+         operational state:up
+
+vsan 80 information
+         name:MC2_STOR_2_80  state:active
+         interoperability mode:default
+         loadbalancing:src-id/dst-id/oxid
+         operational state:up
+
+vsan 4079:evfp_isolated_vsan
+
+vsan 4094:isolated_vsan
+
+FC_switch_A_1(config-vsan-db)# end
+FC_switch_A_1#</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
 </li>
 <li>
 <p>Verify the operation of the MetroCluster configuration in ONTAP:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Check whether the system is multipathed:
-+
-<code><strong>node run -node <em>node-name</em> sysconfig -a</strong></code></p>
+<p>Check whether the system is multipathed:</p>
+<div class="paragraph">
+<p><code><strong>node run -node <em>node-name</em> sysconfig -a</strong></code></p>
+</div>
 </li>
 <li>
-<p>Check for any health alerts on both clusters:
-+
-<code><strong>system health alert show</strong></code></p>
+<p>Check for any health alerts on both clusters:</p>
+<div class="paragraph">
+<p><code><strong>system health alert show</strong></code></p>
+</div>
 </li>
 <li>
-<p>Confirm the MetroCluster configuration and that the operational mode is normal:
-+
-<code><strong>metrocluster show</strong></code></p>
+<p>Confirm the MetroCluster configuration and that the operational mode is normal:</p>
+<div class="paragraph">
+<p><code><strong>metrocluster show</strong></code></p>
+</div>
 </li>
 <li>
-<p>Perform a MetroCluster check:
-+
-<code><strong>metrocluster check run</strong></code></p>
+<p>Perform a MetroCluster check:</p>
+<div class="paragraph">
+<p><code><strong>metrocluster check run</strong></code></p>
+</div>
 </li>
 <li>
-<p>Display the results of the MetroCluster check:
-+
-<code><strong>metrocluster check show</strong></code></p>
+<p>Display the results of the MetroCluster check:</p>
+<div class="paragraph">
+<p><code><strong>metrocluster check show</strong></code></p>
+</div>
 </li>
 <li>
-<p>Check for any health alerts on the switches (if present):
-+
-<code><strong>storage switch show</strong></code></p>
+<p>Check for any health alerts on the switches (if present):</p>
+<div class="paragraph">
+<p><code><strong>storage switch show</strong></code></p>
+</div>
 </li>
 <li>
 <p>Run Config Advisor.</p>

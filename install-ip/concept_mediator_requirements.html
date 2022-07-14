@@ -3745,11 +3745,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-10 14:27:46 +0000">05/10/2022</time>
+    <time datetime="2022-07-12 13:31:27 +0000">07/12/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-martyh">
     <img  class="avatar avatar-small"
           alt="netapp-martyh"
@@ -3790,14 +3798,6 @@
           style="border-radius: 50%;"/>
   </a>
   
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
-    <img  class="avatar avatar-small"
-          alt="netapp-aoife"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/92876203?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
 </span>
 
 
@@ -3806,15 +3806,11 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Your environment must meet the following requirements.</p>
+<p>Your environment must meet certain requirements.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap-metrocluster/images/note.svg" alt="Note">
-</td>
-<td class="content">
+<div class="paragraph">
+<p>The following requirements apply to one disaster recovery group (DR group). Learn more about <a href="concept_parts_of_an_ip_mcc_configuration_mcc_ip.html#disaster-recovery-dr-groups">DR groups</a>.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -3825,6 +3821,9 @@
 </li>
 <li>
 <p>The ONTAP Mediator must be installed on a LINUX host at a separate location from the MetroCluster sites.</p>
+<div class="paragraph">
+<p>The connectivity between the ONTAP Mediator and each site must be two separate failure domains.</p>
+</div>
 </li>
 <li>
 <p>The ONTAP Mediator service can support up to five MetroCluster configurations simultaneously.</p>
@@ -3834,27 +3833,23 @@
 </li>
 </ul>
 </div>
-</td>
-</tr>
-</table>
-</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="network-requirements-for-using-mediator-in-a-metrocluster-configuration">Network requirements for using Mediator in a MetroCluster configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To install the ONTAP Mediator service in a MetroCluster configuration, you must ensure that the configuration meets several network requirements.</p>
+<p>To install the ONTAP Mediator service in a MetroCluster configuration, you must make sure that the configuration meets several network requirements.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
 <p>Latency</p>
 <div class="paragraph">
-<p>Round trip latency must be no more than 75 ms.</p>
+<p>Maximum latency of less than 75ms (RTT).</p>
 </div>
 <div class="paragraph">
-<p>Jitter must be no more than 25 ms.</p>
+<p>Jitter must be no more than 5ms.</p>
 </div>
 </li>
 <li>
@@ -3866,13 +3861,50 @@
 <li>
 <p>Packet loss</p>
 <div class="paragraph">
-<p>Packet loss must be less than or equal to 0.01%.</p>
+<p>For both Internet Control Message Protocol (ICMP) and TCP traffic, packet loss must be less than 0.01%.</p>
 </div>
 </li>
 <li>
 <p>Bandwidth</p>
 <div class="paragraph">
-<p>The link between the Mediator service and the MetroCluster configuration must have at least 20 Mbps of bandwidth.</p>
+<p>The link between the Mediator service and one DR group must have at least 20Mbps of bandwidth.</p>
+</div>
+</li>
+<li>
+<p>Independent connectivity</p>
+<div class="paragraph">
+<p>Independent connectivity between each site and the ONTAP Mediator is required. A failure in one site must not interrupt the IP connectivity between the other two unaffected sites.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="host-requirements-for-the-ontap-mediator-in-a-metrocluster-configuration">Host requirements for the ONTAP Mediator in a MetroCluster configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You must ensure that the configuration meets several host requirements.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ONTAP Mediator must be installed at an external site that is physically separated from the two ONTAP clusters.</p>
+</li>
+<li>
+<p>ONTAP Mediator supports a maximum number of five MetroCluster configurations.</p>
+</li>
+<li>
+<p>ONTAP Mediator does not require more than the host operating system&#8217;s minimum requirements for CPU and memory (RAM).</p>
+</li>
+<li>
+<p>In addition to the host operating system&#8217;s minimum requirements, at least 30GB of additional usable disk space must be available.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Each DR group requires up to 200MB of disk space.</p>
+</li>
+</ul>
 </div>
 </li>
 </ul>
