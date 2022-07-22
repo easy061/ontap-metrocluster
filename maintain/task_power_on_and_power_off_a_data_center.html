@@ -3474,13 +3474,13 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_fc_mcc_us_switchover_and_switchback_mcc_fc_4n_cu.html">
         Upgrade controllers in a MetroCluster FC configuration using switchover and switchback
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_A700_to_A900_in_a_four_node_mcc_fc_us_switchover_and_switchback.html">
-        Upgrade controllers from AFF A700/A900 to FAS9x00 in a MetroCluster FC configuration using switchover and switchback (ONTAP 9.10.1 or later)
+        Upgrade controllers from AFF A700/FAS9000 to AFF A900/FAS9500 in a MetroCluster FC configuration using switchover and switchback (ONTAP 9.10.1 or later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_system_control_commands_in_a_four_node_mcc_fc.html">
         Upgrade controllers in a four-node MetroCluster FC configuration using switchover and switchback with "system controller replace" commands (ONTAP 9.10.1 and later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_ip_mcc_us_switchover_and_switchback_mcc_ip.html">
         Upgrade controllers in a MetroCluster IP configuration using switchover and   switchback (ONTAP 9.8 and later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_A700_to_A900_in_a_four_node_mcc_ip_us_switchover_and_switchback.html">
-        Upgrade controllers from AFF A700/A900 to FAS9x00 in a MetroCluster IP configuration using switchover and switchback  (ONTAP 9.10.1 or later)
+        Upgrade controllers from AFF A700/FAS9000 to AFF A900/FAS9500 in a MetroCluster IP configuration using switchover and switchback  (ONTAP 9.10.1 or later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_refresh_4n_mcc_fc.html">
         Refreshing a four-node MetroCluster FC configuration
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_refresh_4n_mcc_ip.html">
@@ -3745,7 +3745,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-11 13:40:29 +0000">07/11/2022</time>
+    <time datetime="2022-07-12 10:46:54 +0000">07/12/2022</time>
     
   
 
@@ -3935,11 +3935,11 @@ cluster_A::*&gt; metrocluster operation show
 </div>
 </li>
 <li>
-<p>Move volumes and LUNs offline.</p>
+<p>Move any volumes and LUNs that belong to unmirrored aggregates offline.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Move volumes offline.</p>
+<p>Move the volumes offline.</p>
 <div class="listingblock">
 <div class="content">
 <pre>cluster_A::* volume offline &lt;volume name&gt;</pre>
@@ -3947,7 +3947,7 @@ cluster_A::*&gt; metrocluster operation show
 </div>
 </li>
 <li>
-<p>Move LUNs offline.</p>
+<p>Move the LUNs offline.</p>
 <div class="listingblock">
 <div class="content">
 <pre>cluster_A::* lun offline lun_path &lt;lun_path&gt;</pre>

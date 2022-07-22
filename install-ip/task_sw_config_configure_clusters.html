@@ -3474,13 +3474,13 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_fc_mcc_us_switchover_and_switchback_mcc_fc_4n_cu.html">
         Upgrade controllers in a MetroCluster FC configuration using switchover and switchback
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_A700_to_A900_in_a_four_node_mcc_fc_us_switchover_and_switchback.html">
-        Upgrade controllers from AFF A700/A900 to FAS9x00 in a MetroCluster FC configuration using switchover and switchback (ONTAP 9.10.1 or later)
+        Upgrade controllers from AFF A700/FAS9000 to AFF A900/FAS9500 in a MetroCluster FC configuration using switchover and switchback (ONTAP 9.10.1 or later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_system_control_commands_in_a_four_node_mcc_fc.html">
         Upgrade controllers in a four-node MetroCluster FC configuration using switchover and switchback with "system controller replace" commands (ONTAP 9.10.1 and later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_ip_mcc_us_switchover_and_switchback_mcc_ip.html">
         Upgrade controllers in a MetroCluster IP configuration using switchover and   switchback (ONTAP 9.8 and later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_upgrade_A700_to_A900_in_a_four_node_mcc_ip_us_switchover_and_switchback.html">
-        Upgrade controllers from AFF A700/A900 to FAS9x00 in a MetroCluster IP configuration using switchover and switchback  (ONTAP 9.10.1 or later)
+        Upgrade controllers from AFF A700/FAS9000 to AFF A900/FAS9500 in a MetroCluster IP configuration using switchover and switchback  (ONTAP 9.10.1 or later)
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_refresh_4n_mcc_fc.html">
         Refreshing a four-node MetroCluster FC configuration
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/upgrade/task_refresh_4n_mcc_ip.html">
@@ -3745,7 +3745,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-04 15:52:25 +0000">07/04/2022</time>
+    <time datetime="2022-07-18 12:35:59 +0000">07/18/2022</time>
     
   
 
@@ -4675,12 +4675,6 @@ You must choose the MetroCluster IP addresses carefully because you cannot chang
 </li>
 <li>
 <p>You must create all MetroCluster IP interface "A" ports in the same VLAN and all MetroCluster IP interface "B" ports in the other VLAN.  Refer to <a href="concept_considerations_mcip.html">Considerations for MetroCluster IP configuration</a>.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>+</p>
-</div>
 <div class="openblock">
 <div class="content">
 <div class="admonitionblock note">
@@ -4707,13 +4701,9 @@ You must choose the MetroCluster IP addresses carefully because you cannot chang
 </div>
 </div>
 <div class="paragraph">
-<p>+
-The following platform models can be added to the existing MetroCluster configuration if the VLANs used are 10/20 or greater than 100. If any other VLANs are used, then these platforms cannot be added
+<p>The following platform models can be added to the existing MetroCluster configuration if the VLANs used are 10/20 or greater than 100. If any other VLANs are used, then these platforms cannot be added
 to the existing configuration as the MetroCluster interface cannot be configured.
 If you are using any other platform, the VLAN configuration is not relevant as this is not required in ONTAP.</p>
-</div>
-<div class="paragraph">
-<p>+</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -5024,6 +5014,9 @@ If you are using any other platform, the VLAN configuration is not relevant as t
 </tr>
 </tbody>
 </table>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p>The port usage in the following examples is for an AFF A700 or a FAS9000 system.</p>
 </div>
