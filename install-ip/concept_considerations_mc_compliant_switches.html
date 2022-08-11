@@ -1852,6 +1852,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -3323,6 +3325,8 @@
         Upgrade firmware on MetroCluster IP switches
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_upgrade_rcf_files_on_mcc_ip_switches.html">
         Upgrade RCF files on MetroCluster IP switches
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_upgrade_rcf_files_on_mcc_ip_switches_with_cleanupfiles.html">
+        Upgrade RCF files on MetroCluster IP switches using cleanupfiles
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_rename_a_cisco_ip_switch.html">
         Rename a Cisco IP switch
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_add_remove_or_change_isl_ports_nondisruptively.html">
@@ -3745,7 +3749,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-15 12:17:42 +0000">06/15/2022</time>
+    <time datetime="2022-08-10 10:41:23 +0000">08/10/2022</time>
     
   
 
@@ -3898,10 +3902,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="platform-specific-network-speeds-for-metrocluster-compliant-switches">Platform-specific network speeds for MetroCluster-compliant switches</h2>
+<h2 id="platform-specific-network-speeds-and-switch-port-modes-for-metrocluster-compliant-switches">Platform-specific network speeds and switch port modes for MetroCluster-compliant switches</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following table provides platform-specific network speeds for MetroCluster compliant switches.</p>
+<p>The following table provides platform-specific network speeds and switch port modes for MetroCluster compliant switches. You should configure the switch port mode as outlined in the table.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3917,13 +3921,15 @@ Missing values indicate that the platform is not supported.
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
 </colgroup>
 <tbody>
 <tr>
 <th class="tableblock halign-left valign-top"><p class="tableblock">Platform</p></th>
 <th class="tableblock halign-left valign-top"><p class="tableblock">Network Speed (Gbps)</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Switch port mode</p></th>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -3931,6 +3937,9 @@ Missing values indicate that the platform is not supported.
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>100</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>trunk mode</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3940,6 +3949,9 @@ Missing values indicate that the platform is not supported.
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>40 or 100</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>access mode</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -3947,6 +3959,9 @@ Missing values indicate that the platform is not supported.
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>40</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>access mode</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3956,6 +3971,9 @@ Missing values indicate that the platform is not supported.
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>40 or 100</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>trunk mode</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -3963,6 +3981,9 @@ Missing values indicate that the platform is not supported.
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>100</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>access mode</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3972,10 +3993,16 @@ Missing values indicate that the platform is not supported.
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>25</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>access mode</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>AFF A250</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>-</p>
@@ -3988,6 +4015,9 @@ Missing values indicate that the platform is not supported.
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>-</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -3995,6 +4025,9 @@ Missing values indicate that the platform is not supported.
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>40</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>access mode</p>
 </div></div></td>
 </tr>
 <tr>
@@ -4004,6 +4037,9 @@ Missing values indicate that the platform is not supported.
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>100</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>trunk mode</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -4011,6 +4047,9 @@ Missing values indicate that the platform is not supported.
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>100</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>trunk mode</p>
 </div></div></td>
 </tr>
 <tr>
@@ -4020,6 +4059,9 @@ Missing values indicate that the platform is not supported.
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>40 or 100</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>trunk mode</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -4027,6 +4069,9 @@ Missing values indicate that the platform is not supported.
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>25</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>access mode</p>
 </div></div></td>
 </tr>
 <tr>
@@ -4036,10 +4081,16 @@ Missing values indicate that the platform is not supported.
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>-</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>FAS500f</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>-</p>

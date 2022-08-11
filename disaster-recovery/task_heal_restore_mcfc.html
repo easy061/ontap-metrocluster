@@ -1850,6 +1850,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -3323,6 +3325,8 @@
         Upgrade firmware on MetroCluster IP switches
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_upgrade_rcf_files_on_mcc_ip_switches.html">
         Upgrade RCF files on MetroCluster IP switches
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_upgrade_rcf_files_on_mcc_ip_switches_with_cleanupfiles.html">
+        Upgrade RCF files on MetroCluster IP switches using cleanupfiles
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_rename_a_cisco_ip_switch.html">
         Rename a Cisco IP switch
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_add_remove_or_change_isl_ports_nondisruptively.html">
@@ -3745,7 +3749,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-08-12 20:31:50 +0000">08/12/2021</time>
+    <time datetime="2022-08-10 13:49:59 +0000">08/10/2022</time>
     
   
 
@@ -3763,6 +3767,14 @@
           alt="netapp-pcarriga"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/77334475?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-folivia">
+    <img  class="avatar avatar-small"
+          alt="netapp-folivia"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/91882669?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -3815,7 +3827,7 @@ cluster_B::&gt; metrocluster heal -phase root aggregates</pre>
 <p>mirror degraded</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Proceed to <a href="#step3_fc_aggr_healing">Step 3</a></p>
+<p>Proceed to <a href="#step3_fc_aggr_healing">If one or more plexes remain offline, additional steps are required to rebuild the mirror.</a></p>
 </div></div></td>
 </tr>
 <tr>

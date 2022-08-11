@@ -1852,6 +1852,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -3323,6 +3325,8 @@
         Upgrade firmware on MetroCluster IP switches
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_upgrade_rcf_files_on_mcc_ip_switches.html">
         Upgrade RCF files on MetroCluster IP switches
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_upgrade_rcf_files_on_mcc_ip_switches_with_cleanupfiles.html">
+        Upgrade RCF files on MetroCluster IP switches using cleanupfiles
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_rename_a_cisco_ip_switch.html">
         Rename a Cisco IP switch
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_add_remove_or_change_isl_ports_nondisruptively.html">
@@ -3745,11 +3749,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-08-26 13:54:59 +0000">08/26/2021</time>
+    <time datetime="2022-08-08 14:10:40 +0000">08/08/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-martyh">
     <img  class="avatar avatar-small"
           alt="netapp-martyh"
@@ -4045,10 +4057,60 @@ You must follow the <a href="#basic-metrocluster-isl-requirements">Basic MetroCl
 <p>16 x 10-Gbps ISLs</p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Cisco 9336C-FX2 (not connecting NS224 shelves)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Native ports</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>6 ISLs using 40 or 100-Gbps</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Cisco 9336C-FX2 (not connecting NS224 shelves)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Breakout cables</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>16 ISLs using 10-Gbps</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Cisco 9336C-FX2 (connecting NS224 shelves)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Native ports (2)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>4 ISLs using 40 or 100-Gbps</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Cisco 9336C-FX2 (connecting NS224 shelves)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Breakout cables (2)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>16 ISLs using 10-Gbps</p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 <div class="ulist">
 <ul>
+<li>
+<p>Using 40 or 100-Gbps ISL ports on the BES-53248 switch requires an additional license.</p>
+</li>
+<li>
+<p>When you create the RCF files for a Cisco 9336C-FX2 (connecting NS224 shelves), you must choose to configure the ISL’s in native <strong>or</strong> breakout mode.</p>
+</li>
 <li>
 <p>The use of breakout cables (one physical port is used as 4 x 10 Gbps ports) is supported on Cisco switches.</p>
 </li>

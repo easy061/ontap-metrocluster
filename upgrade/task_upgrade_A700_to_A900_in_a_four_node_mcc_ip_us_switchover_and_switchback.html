@@ -1850,6 +1850,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -3323,6 +3325,8 @@
         Upgrade firmware on MetroCluster IP switches
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_upgrade_rcf_files_on_mcc_ip_switches.html">
         Upgrade RCF files on MetroCluster IP switches
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_upgrade_rcf_files_on_mcc_ip_switches_with_cleanupfiles.html">
+        Upgrade RCF files on MetroCluster IP switches using cleanupfiles
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_rename_a_cisco_ip_switch.html">
         Rename a Cisco IP switch
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/maintain/task_add_remove_or_change_isl_ports_nondisruptively.html">
@@ -3745,7 +3749,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-12 14:08:16 +0000">07/12/2022</time>
+    <time datetime="2022-08-11 12:56:36 +0000">08/11/2022</time>
     
   
 
@@ -3758,6 +3762,14 @@
           style="border-radius: 50%;"/>
   </a>
   
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-martyh">
+    <img  class="avatar avatar-small"
+          alt="netapp-martyh"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/66496079?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ahibbard">
     <img  class="avatar avatar-small"
           alt="netapp-ahibbard"
@@ -3766,11 +3778,11 @@
           style="border-radius: 50%;"/>
   </a>
   
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-martyh">
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
     <img  class="avatar avatar-small"
-          alt="netapp-martyh"
+          alt="netapp-aoife"
           width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/66496079?v=4"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -3954,7 +3966,7 @@
 <div class="sect2">
 <h3 id="update-the-metrocluster-switch-rcf-files-before-upgrading-controllers">Update the MetroCluster switch RCF files before upgrading controllers</h3>
 <div class="paragraph">
-<p>The MetroCluster IP configuration on an AFF A700 or FAS9000 does not use VLANs. The MetroCluster configuration on an AFF A900 or FAS9500 does use VLANs. As a result, you need to change the RCF file when upgrading from an AFF A700 or FAS9000 to an AFF A900 or FAS9500.</p>
+<p>You must update the RCF files on MetroCluster switches when performing this upgrade. The following table provides the VLAN ranges supported for AFF A900/FAS9500 MetroCluster IP configurations.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -6025,8 +6037,7 @@ Remote: cluster_A         Configuration state configured
 <p>Mediator</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>link:../install-ip/concept_mediator_requirements.html
-[Configuring the ONTAP Mediator service from a MetroCluster IP configuration] in the <em>MetroCluster IP Installation and Configuration</em> section.</p>
+<p><a href="../install-ip/concept_mediator_requirements.html">Configuring the ONTAP Mediator service from a MetroCluster IP configuration</a> in the <em>MetroCluster IP Installation and Configuration</em> section.</p>
 </div></div></td>
 </tr>
 <tr>
