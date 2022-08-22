@@ -3753,7 +3753,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-29 09:39:34 +0000">06/29/2022</time>
+    <time datetime="2022-08-12 13:11:46 +0000">08/12/2022</time>
     
   
 
@@ -3779,6 +3779,14 @@
           alt="netapp-martyh"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/66496079?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -4156,6 +4164,38 @@ Configuration Saved!
 </div>
 </div>
 </div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Check if your version of EFOS is FIPS compliant or non-FIPS compliant by using the <code>show fips status</code> command. In the following examples, <code>IP_switch_A_1</code> is using FIPS compliant EFOS and <code>IP_switch_A_2</code> is using  non-FIPS compliant EFOS.</p>
+<div class="paragraph">
+<p><strong>Example 1</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>IP_switch_A_1 #show fips status
+
+System running in FIPS mode
+
+IP_switch_A_1 #</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Example 2</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>IP_switch_A_2 #show fips status
+                     ^
+% Invalid input detected at `^` marker.
+
+IP_switch_A_2 #</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Use the following table to determine which method you must follow:</p>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -4260,6 +4300,9 @@ The configuration and license information is retained</p>
 <p>Method 2: <a href="#steps-to-upgrade-efos-using-the-onie-os-installation">Steps to upgrade EFOS using the ONIE OS installation</a></p>
 </li>
 </ul>
+</div>
+</li>
+</ol>
 </div>
 <div class="sect2">
 <h3 id="steps-to-upgrade-efos-with-downloading-the-software-image-to-the-backup-boot-partition">Steps to upgrade EFOS with downloading the software image to the backup boot partition</h3>
