@@ -6068,11 +6068,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-24 15:07:38 +0000">05/24/2021</time>
+    <time datetime="2022-09-09 15:59:27 +0000">09/09/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ranuk">
     <img  class="avatar avatar-small"
           alt="netapp-ranuk"
@@ -6181,13 +6189,13 @@ cluster_B::&gt;</pre>
 <li>
 <p>Take the aggregate offline: <code>storage aggregate offline -aggregate aggregate-name</code></p>
 <div class="paragraph">
-<p>The following example shows the aggregate node_B_1_aggr0 being taken offline:</p>
+<p>The following example shows the aggregate aggr_data_a1 being taken offline:</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>cluster_B::&gt; storage aggregate offline -aggregate node_B_1_aggr0
+<pre>cluster_B::&gt; storage aggregate offline -aggregate aggr_data_a1
 
-Aggregate offline successful on aggregate: node_B_1_aggr0</pre>
+Aggregate offline successful on aggregate: aggr_data_a1</pre>
 </div>
 </div>
 </li>
@@ -6197,12 +6205,12 @@ Aggregate offline successful on aggregate: node_B_1_aggr0</pre>
 <p>You can destroy the plex when prompted.</p>
 </div>
 <div class="paragraph">
-<p>The following example shows the aggregate node_B_1_aggr0 being deleted.</p>
+<p>The following example shows the aggregate aggr_data_a1 being deleted.</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>cluster_B::&gt; storage aggregate delete -aggregate node_B_1_aggr0
-Warning: Are you sure you want to destroy aggregate "node_B_1_aggr0"? {y|n}: y
+<pre>cluster_B::&gt; storage aggregate delete -aggregate aggr_data_a1
+Warning: Are you sure you want to destroy aggregate "aggr_data_a1"? {y|n}: y
 [Job 123] Job succeeded: DONE
 
 cluster_B::&gt;</pre>
