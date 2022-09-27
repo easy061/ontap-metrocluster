@@ -2741,7 +2741,9 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container" id="mysidebardiv">
+</script><div class="prod-nav" id="product-nav">
+  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/us-en/ontap-family/"><img src="/us-en/ontap-metrocluster/images/left_arrow.png" alt=""><pre>All ONTAP product documentation</pre></a>
+</div><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li 
       data-pdf-exists="true" 
       data-pdf-filename="MetroCluster"
@@ -6046,7 +6048,7 @@
 
         
         <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com/us-en/ontap-systems-family/">AFF and FAS Systems</a>
+          <a href="https://docs.netapp.com/us-en/ontap-family/">ONTAP</a>
         </li>
         
 
@@ -6068,7 +6070,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-09 14:46:16 +0000">08/09/2022</time>
+    <time datetime="2022-09-19 14:47:55 +0000">09/19/2022</time>
     
   
 
@@ -6278,9 +6280,25 @@ volumes             ok
 </li>
 <li>
 <p>Download and install the IP RCF file, depending on your switch vendor.</p>
-</li>
-</ol>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-metrocluster/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Update the switches in the following order:  Switch_A_1, Switch_B_1, Switch_A_2, Switch_B_2
+</td>
+</tr>
+</table>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../install-ip/task_switch_config_broadcom.html#downloading-and-installing-the-broadcom-rcf-files">Downloading and installing the Broadcom IP RCF files</a></p>
+</li>
+<li>
+<p><a href="../install-ip/task_switch_config_cisco.html#downloading-and-installing-the-cisco-ip-rcf-files">Downloading and installing the Cisco IP RCF files</a></p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6293,31 +6311,9 @@ If you have an L2 shared or L3 network configuration, you might need to adjust t
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>+
-* <a href="../install-ip/task_switch_config_broadcom.html#downloading-and-installing-the-broadcom-rcf-files">Downloading and installing the Broadcom IP RCF files</a></p>
-</div>
-<div class="paragraph">
-<p>+
-* <a href="../install-ip/task_switch_config_cisco.html#downloading-and-installing-the-cisco-ip-rcf-files">Downloading and installing the Cisco IP RCF files</a></p>
-</div>
-<div class="paragraph">
-<p>+
-Update the switches in the following order:</p>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Switch_A_1</p>
 </li>
-<li>
-<p>Switch_B_1</p>
-</li>
-<li>
-<p>Switch_A_2</p>
-</li>
-<li>
-<p>Switch_B_2</p>
+</ul>
+</div>
 </li>
 </ol>
 </div>
