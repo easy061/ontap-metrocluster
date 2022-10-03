@@ -944,6 +944,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/port_usage_sn2100.html</loc>
+      
+      <lastmod>2022-07-25T12:43:53+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/manage/reference_commands_for_switchover_healing_and_switchback.html</loc>
       
       <lastmod>2022-02-03T22:01:55+00:00</lastmod>
@@ -1331,7 +1338,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster//search.html</loc>
       
-      <lastmod>2022-10-03T16:06:26+00:00</lastmod>
+      <lastmod>2022-10-03T20:13:20+00:00</lastmod>
       
     </url>
   
@@ -2802,6 +2809,13 @@
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_switch_config_cisco_macsec.html</loc>
       
       <lastmod>2022-05-06T11:15:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_switch_config_nvidia.html</loc>
+      
+      <lastmod>2022-07-25T12:15:47+00:00</lastmod>
       
     </url>
   
