@@ -50,7 +50,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html</loc>
       
-      <lastmod>2022-08-30T10:30:47+00:00</lastmod>
+      <lastmod>2022-09-30T10:29:49+00:00</lastmod>
       
     </url>
   
@@ -1331,7 +1331,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster//search.html</loc>
       
-      <lastmod>2022-09-27T13:29:36+00:00</lastmod>
+      <lastmod>2022-10-03T16:06:26+00:00</lastmod>
       
     </url>
   
@@ -2255,14 +2255,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/transition/task_move_cluster_connections.html</loc>
       
-      <lastmod>2022-05-05T13:39:19+00:00</lastmod>
+      <lastmod>2022-08-31T17:43:01+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/transition/task_move_data_to_new_drive_shelves.html</loc>
       
-      <lastmod>2022-02-03T22:01:55+00:00</lastmod>
+      <lastmod>2022-08-31T17:43:01+00:00</lastmod>
       
     </url>
   
@@ -2507,7 +2507,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/transition/task_remove_mc_fc_controllers.html</loc>
       
-      <lastmod>2022-09-09T15:59:27+00:00</lastmod>
+      <lastmod>2022-09-28T12:54:40+00:00</lastmod>
       
     </url>
   
