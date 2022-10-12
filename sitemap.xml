@@ -50,7 +50,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html</loc>
       
-      <lastmod>2022-09-30T10:29:49+00:00</lastmod>
+      <lastmod>2022-10-11T17:13:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_controller_upgrade_mcc.html</loc>
+      
+      <lastmod>2022-10-11T16:58:21+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_tech_refresh_mcc.html</loc>
+      
+      <lastmod>2022-10-07T16:07:19+00:00</lastmod>
       
     </url>
   
@@ -1338,7 +1352,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster//search.html</loc>
       
-      <lastmod>2022-10-03T20:13:20+00:00</lastmod>
+      <lastmod>2022-10-12T13:25:18+00:00</lastmod>
       
     </url>
   
@@ -2878,28 +2892,28 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_upgrade_A700_to_A900_in_a_four_node_mcc_ip_us_switchover_and_switchback.html</loc>
       
-      <lastmod>2022-08-11T12:56:36+00:00</lastmod>
+      <lastmod>2022-10-07T17:41:13+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_fc_mcc_us_switchover_and_switchback_mcc_fc_4n_cu.html</loc>
       
-      <lastmod>2022-07-25T14:43:36+00:00</lastmod>
+      <lastmod>2022-10-07T17:41:13+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_ip_mcc_us_switchover_and_switchback_mcc_ip.html</loc>
       
-      <lastmod>2022-08-23T16:05:06+00:00</lastmod>
+      <lastmod>2022-10-11T16:38:43+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_system_control_commands_in_a_four_node_mcc_fc.html</loc>
       
-      <lastmod>2022-02-03T22:01:55+00:00</lastmod>
+      <lastmod>2022-10-07T18:16:40+00:00</lastmod>
       
     </url>
   
