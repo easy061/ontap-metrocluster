@@ -143,6 +143,17 @@
               $("#mysidebar").navgoco('toggle', true);
           });
 
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/us-en/ontap-metrocluster"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
       });
 
   </script>
@@ -2758,7 +2769,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install a fabric-attached MetroCluster</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -2774,7 +2785,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare for the MetroCluster installation</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Differences among the ONTAP MetroCluster configurations"
@@ -2853,7 +2864,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Cable a fabric-attached MetroCluster configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -2869,7 +2880,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Parts of a fabric MetroCluster configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -2927,7 +2938,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install and cable MetroCluster components</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Rack the hardware components"
@@ -2978,7 +2989,7 @@
     ><a href="/us-en/ontap-metrocluster/install-fc/concept_AFF_A900_port_assign_fc_switches_ontap_9_1.html">
         <div class="na-navbar-padding"> Port assignments for FC switches when using AFF A900 systems</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="AFF A900 Brocade port usage for controllers running ONTAP 9.10.1 or later"
@@ -3043,7 +3054,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure the FC switches</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure Brocade FC switches with RCF files"
@@ -3052,7 +3063,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure Brocade FC switches with RCF files</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Reset the Brocade FC switch to factory defaults"
@@ -3082,7 +3093,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure the Cisco FC switches with RCF files</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Reset the Cisco FC switch to factory defaults"
@@ -3133,7 +3144,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure hardware for sharing a Brocade 6510 FC fabric during transition</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -3170,7 +3181,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure switch fabrics sharing between the 7-Mode and clustered MetroCluster configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Disable one of the switch fabrics"
@@ -3235,7 +3246,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Plan and install a MetroCluster configuration with array LUNs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Plan for a MetroCluster configuration with array LUNs"
@@ -3265,7 +3276,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install and cable the MetroCluster components in a configuration with array LUNs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Rack the hardware components in a MetroCluster configuration with array LUNs"
@@ -3295,7 +3306,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Cable the FC-VI and HBA ports in a MetroCluster configuration with array LUNs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Cable the FC-VI and HBA ports in a two-node fabric-attached MetroCluster configuration with array LUNs"
@@ -3360,7 +3371,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Cable storage arrays to FC switches in a MetroCluster configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -3397,7 +3408,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Switch zoning in a MetroCluster configuration with array LUNs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Requirements for switch zoning in a MetroCluster configuration with array LUNs"
@@ -3434,7 +3445,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Set up ONTAP in a MetroCluster configuration with array LUNs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Verifying and configuring the HA state of components in Maintenance mode"
@@ -3506,7 +3517,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Implement a MetroCluster configuration with both disks and array LUNs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -3543,7 +3554,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How to use the Active IQ Unified Manager and ONTAP System Manager for further configuration and monitoring</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Synchronize the system time using NTP"
@@ -3573,7 +3584,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install a MetroCluster IP configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -3589,7 +3600,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare for the MetroCluster installation</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Differences among the ONTAP MetroCluster configurations"
@@ -3640,7 +3651,7 @@
     ><a href="/us-en/ontap-metrocluster/install-ip/concept_considerations_layer_3.html">
         <div class="na-navbar-padding"> How to use layer 3 wide-area networks</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Modifying address, netmask, and gateway in a MetroCluster IP"
@@ -3698,7 +3709,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure the MetroCluster hardware components</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Parts of a MetroCluster IP configuration"
@@ -3728,7 +3739,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Cable the MetroCluster IP switches</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How to use the port tables with the RcfFileGenerator tool or multiple MetroCluster configurations"
@@ -3779,7 +3790,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure the MetroCluster IP switches</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure Broadcom IP switches"
@@ -3795,7 +3806,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure Cisco IP switches</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure basic settings"
@@ -3825,7 +3836,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure the MetroCluster software in ONTAP</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -3918,7 +3929,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure the ONTAP Mediator service for unplanned automatic switchover</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Prepare to install the ONTAP Mediator service"
@@ -3983,7 +3994,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install a stretch MetroCluster configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -3999,7 +4010,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare for the MetroCluster installation</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Differences between the ONTAP MetroCluster configurations"
@@ -4043,7 +4054,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Cable a two-node SAS-attached stretch MetroCluster configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -4073,7 +4084,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install and cable MetroCluster components for two-node SAS-attached stretch configurations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -4117,7 +4128,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Cable a two-node bridge-attached stretch MetroCluster configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -4154,7 +4165,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install and cable MetroCluster components</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Rack the hardware components"
@@ -4219,7 +4230,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Connections in a stretch MetroCluster configurations with array LUNs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -4263,7 +4274,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> How to use the Active IQ Unified Manager and ONTAP System Manager for further configuration and monitoring</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -4307,7 +4318,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install and Configure MetroCluster Tiebreaker</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview of the Tiebreaker software"
@@ -4372,7 +4383,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Understand MetroCluster data protection and disaster recovery</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="How MetroCluster protects data and provides disaster recovery"
@@ -4388,7 +4399,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Perform switchover, healing, and switchback</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Perform switchover for tests or maintenance"
@@ -4397,7 +4408,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Perform switchover for tests or maintenance</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -4441,7 +4452,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Heal the configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Heal the configuration in a MetroCluster FC configuration"
@@ -4450,7 +4461,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Heal the configuration in a MetroCluster FC configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -4529,7 +4540,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Maintain the MetroCluster components</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Where to find procedures for MetroCluster maintenance tasks"
@@ -4559,7 +4570,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> FC-to-SAS bridge maintenance</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Support for FibreBridge 7600N bridges in MetroCluster configurations"
@@ -4638,7 +4649,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> FC switch maintenance and replacement</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade or downgrade the firmware on a Brocade FC switch"
@@ -4717,7 +4728,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> IP switch maintenance and replacement</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Replace an IP switch"
@@ -4782,7 +4793,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Hot add storage to a MetroCluster FC configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Hot add a SAS disk shelf in a direct-attached MetroCluster FC configuration using SAS optical cables"
@@ -4798,7 +4809,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Hot add SAS storage to a bridge-attached MetroCluster FC configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Hot add a stack of SAS disk shelves to an existing pair of FibreBridge 7500N bridges"
@@ -4821,7 +4832,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Hot add a SAS disk shelf to a stack of SAS disk shelves</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Preparing to hot-add SAS disk shelves"
@@ -4921,7 +4932,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Port assignments for FC switches</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Port assignments for systems using two initiator ports"
@@ -4965,7 +4976,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Transition from MetroCluster FC to MetroCluster IP</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Choose your transition procedure"
@@ -4988,7 +4999,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Transition nondisruptively from a MetroCluster FC to a MetroCluster IP configuration (ONTAP 9.8 and later)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -5004,7 +5015,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare for transition from a MetroCluster FC to a MetroCluster IP configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Requirements for nondisruptive FC-to-IP transition"
@@ -5062,7 +5073,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Transition from MetroCluster FC to MetroCluster IP configurations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Verify the health of the MetroCluster configuration"
@@ -5148,7 +5159,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Disruptively transition from a two-node MetroCluster FC to a four-node MetroCluster IP configuration (ONTAP 9.8 and later)</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -5241,7 +5252,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Upgrade or expand the MetroCluster configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Start here - Choose your procedure"
@@ -5250,7 +5261,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Start here - Choose your procedure</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Choose controller upgrade, system refresh, or expansion"
@@ -5329,7 +5340,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Expand a two-node MetroCluster FC configuration to a four-node configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -5366,7 +5377,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Add a new controller module to each cluster</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -5424,7 +5435,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install and cable the new controller module</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Prerequisites and installation"
@@ -5503,7 +5514,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure intercluster LIFs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure intercluster LIFs on dedicated ports"
@@ -5575,7 +5586,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Expand a four-node MetroCluster FC configuration to an eight-node configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -5626,7 +5637,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Recable and zone a switch fabric for the new nodes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Disconnect the existing DR group from the fabric"
@@ -5649,7 +5660,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure ONTAP on the new controllers</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Clear the configuration on a controller module"
@@ -5693,7 +5704,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure the clusters into a MetroCluster configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure intercluster LIFs"
@@ -5702,7 +5713,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure intercluster LIFs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure intercluster LIFs on dedicated ports"
@@ -5809,7 +5820,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Recover from a disaster</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Workflow for disaster recovery"
@@ -5839,7 +5850,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Recover from a multi-controller or storage failure</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Before you begin"
@@ -5862,7 +5873,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare for switchback in a MetroCluster IP configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -5955,7 +5966,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Prepare for switchback in a MetroCluster FC configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Verify port configuration (MetroCluster FC configurations only)"
@@ -6058,6 +6069,7 @@
 </script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
 
 
   </div>
