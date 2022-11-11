@@ -25,28 +25,8 @@
   <!-- Elastic Search -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
 
-  <!-- Controls AsciiDoctor Admonition Blocks -->
-  <link rel="stylesheet" type="text/css" href="/us-en/ontap-metrocluster/css/font-awesome.min.css">
-
-  <!-- Controls the shadow effect for search dropdown menu -->
-  <link rel="stylesheet" href="/us-en/ontap-metrocluster/css/boxshadowproperties.css">
-
-  <!-- NetApp CSS controls the technical content -->
-  <link rel="stylesheet" type="text/css" href="/us-en/ontap-metrocluster/css/netapp.css">
-
-  <!-- WWW CSS Content -->
-  <link rel="stylesheet" type="text/css" href="/us-en/ontap-metrocluster/css/www-luci-dotcom.min.css">
-  <link rel="stylesheet" type="text/css" href="/us-en/ontap-metrocluster/css/www-netapp-dotcom.css">
-  <link rel="stylesheet" href="/us-en/ontap-metrocluster/css/www-netapp-library-critical.min.css" media="all" >
-  <link rel="stylesheet" href="/us-en/ontap-metrocluster/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="stylesheet" href="/us-en/ontap-metrocluster/css/www-netapp-library-global-header-footer.min.css">
-
-  <!-- NetApp IE Customizations -->
-  <link rel="stylesheet" href='/us-en/ontap-metrocluster/css/na-utility.css' type='text/css'>
-  <link rel="stylesheet" href='/us-en/ontap-metrocluster/css/na-sidebar.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/ontap-metrocluster/css/clouddocs.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/ontap-metrocluster/css/custom-dropdown.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/ontap-metrocluster/css/na-pagenav.css' type='text/css'>
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/us-en/ontap-metrocluster/css/netappdocs.css">
 
   
   <link rel="stylesheet" href="/us-en/ontap-metrocluster/css/landing-page.css" type="text/css">
@@ -98,11 +78,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/us-en/ontap-metrocluster/js/na-search.js'></script><script src='/us-en/ontap-metrocluster/js/na-pagenav.js'></script><link rel='stylesheet' href='/us-en/ontap-metrocluster/css/prism.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/ontap-metrocluster/css/prism-netapp.css' type='text/css'>
-
-
-  <script src='/us-en/ontap-metrocluster/js/na-utility.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/us-en/ontap-metrocluster/js/na-search.js'></script><script src='/us-en/ontap-metrocluster/js/na-pagenav.js'></script><script src='/us-en/ontap-metrocluster/js/na-utility.js'></script>
   <script src='/us-en/ontap-metrocluster/js/clouddocs.js'></script>
   <script src='/us-en/ontap-metrocluster/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -1272,6 +1248,8 @@
 
     <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
+
+
 
 
 
@@ -3999,6 +3977,13 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/install-ip/task_connecting_mcc_to_different_mediator_instance.html">
         Connect a MetroCluster configuration to a different ONTAP Mediator instance
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risks and limitations of using MetroCluster automatic forced switchover"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/ontap-metrocluster/install-ip/concept-risks-limitations-automatic-switchover.html">
+        Risks and limitations of using MetroCluster automatic forced switchover
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Testing the MetroCluster configuration"
@@ -6152,7 +6137,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-31 19:24:46 +0000">03/31/2022</time>
+    <time datetime="2022-09-09 13:46:16 +0000">09/09/2022</time>
     
   
 
@@ -6162,6 +6147,14 @@
           alt="netapp-martyh"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/66496079?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-folivia">
+    <img  class="avatar avatar-small"
+          alt="netapp-folivia"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/91882669?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -6208,6 +6201,18 @@
 <p>All nodes of the MetroCluster IP configuration must be online.</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-metrocluster/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+Beginning with ONTAP 9.12.1, you can enable the MetroCluster automatic forced switchover feature in a MetroCluster IP configuration. This feature is an extension of the Mediator-assisted unplanned switchover. Before you enable this feature, review <a href="concept-risks-limitations-automatic-switchover.html">Risks and limitations of using MetroCluster automatic forced switchover</a>.
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <div class="title">About this task</div>
@@ -6305,6 +6310,18 @@ You will be prompted for the username and password for the Mediator admin user a
 </div>
 </li>
 </ol>
+</div>
+</li>
+<li>
+<p>If you want to configure MetroCluster automatic forced switchover, run the following command: <code>metrocluster modify -allow-automatic-forced-switchover true</code></p>
+<div class="paragraph">
+<p>Before you enable this feature, review <a href="concept-risks-limitations-automatic-switchover.html">Risks and limitations of using MetroCluster automatic forced switchover</a>.</p>
+</div>
+<div class="literalblock">
+<div class="title">Example</div>
+<div class="content">
+<pre>cluster_A::*&gt; metrocluster modify -allow-automatic-forced-switchover true</pre>
+</div>
 </div>
 </li>
 </ol>
