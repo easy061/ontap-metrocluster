@@ -6141,7 +6141,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-26 13:20:01 +0000">09/26/2022</time>
+    <time datetime="2022-11-15 17:37:00 +0000">11/15/2022</time>
     
   
 
@@ -6268,7 +6268,7 @@ Root aggregates are not deleted.
 <br>
 <code>network interface show -home-node <em>old_node</em></code></p>
 <div class="paragraph">
-<p><code>network interface modify -vserver <em>svm-name</em> -lif <em>data-lif</em> -home-port <em>port-id</em></code></p>
+<p><code>network interface modify -vserver svm-name -lif data-lif -home-node new_node -home-port port-id</code></p>
 </div>
 </li>
 <li>
@@ -6277,7 +6277,7 @@ Root aggregates are not deleted.
 <p><code>network interface show -role cluster-mgmt</code></p>
 </div>
 <div class="paragraph">
-<p><code>network interface modify -vserver <em>svm-name</em> -lif <em>data-lif</em> -home-port <em>port-id</em></code></p>
+<p><code>network interface modify -vserver svm-name -lif cluster_mgmt -home-node new_node -home-port port-id</code></p>
 </div>
 <div class="paragraph">
 <p>Node management and inter-cluster LIFs are not migrated.</p>

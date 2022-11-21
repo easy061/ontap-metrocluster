@@ -120,7 +120,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/concept_configure_the_mcc_software_in_ontap.html</loc>
       
-      <lastmod>2022-10-15T09:25:17+00:00</lastmod>
+      <lastmod>2022-11-14T10:10:50+00:00</lastmod>
       
     </url>
   
@@ -183,7 +183,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_considerations_drive_assignment.html</loc>
       
-      <lastmod>2022-09-06T11:13:18+00:00</lastmod>
+      <lastmod>2022-11-16T12:19:11+00:00</lastmod>
       
     </url>
   
@@ -309,7 +309,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/concept_considerations_peering.html</loc>
       
-      <lastmod>2021-06-10T00:08:26+00:00</lastmod>
+      <lastmod>2022-10-26T09:56:07+00:00</lastmod>
       
     </url>
   
@@ -687,7 +687,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_removing_a_disaster_recovery_group.html</loc>
       
-      <lastmod>2022-09-26T13:20:01+00:00</lastmod>
+      <lastmod>2022-11-15T17:37:00+00:00</lastmod>
       
     </url>
   
@@ -1359,7 +1359,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster//search.html</loc>
       
-      <lastmod>2022-11-15T11:18:46+00:00</lastmod>
+      <lastmod>2022-11-21T18:02:53+00:00</lastmod>
       
     </url>
   
@@ -1520,7 +1520,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/task_cable_the_cluster_peering_connections.html</loc>
       
-      <lastmod>2021-08-11T20:55:35+00:00</lastmod>
+      <lastmod>2022-11-07T09:40:18+00:00</lastmod>
       
     </url>
   
@@ -1926,7 +1926,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_expand_a_four_node_mcc_ip_configuration.html</loc>
       
-      <lastmod>2022-05-05T13:39:19+00:00</lastmod>
+      <lastmod>2022-11-07T09:46:46+00:00</lastmod>
       
     </url>
   
@@ -2304,7 +2304,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_netboot_and_set_up_ontap_on_the_new_controller_module_mcc.html</loc>
       
-      <lastmod>2022-02-03T22:01:55+00:00</lastmod>
+      <lastmod>2022-10-06T16:15:45+00:00</lastmod>
       
     </url>
   
@@ -2549,7 +2549,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_remove_unconfigure_mediator.html</loc>
       
-      <lastmod>2022-05-18T13:34:09+00:00</lastmod>
+      <lastmod>2022-11-07T12:29:16+00:00</lastmod>
       
     </url>
   
@@ -2906,7 +2906,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_fc_mcc_us_switchover_and_switchback_mcc_fc_4n_cu.html</loc>
       
-      <lastmod>2022-10-19T12:49:37+00:00</lastmod>
+      <lastmod>2022-11-14T10:09:49+00:00</lastmod>
       
     </url>
   
@@ -2955,7 +2955,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-metrocluster/maintain/task_upgrade_rcf_files_on_mcc_ip_switches.html</loc>
       
-      <lastmod>2022-09-19T14:47:55+00:00</lastmod>
+      <lastmod>2022-10-06T16:17:07+00:00</lastmod>
       
     </url>
   

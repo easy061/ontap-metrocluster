@@ -6141,7 +6141,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-18 13:34:09 +0000">05/18/2022</time>
+    <time datetime="2022-11-07 12:29:16 +0000">11/07/2022</time>
     
   
 
@@ -6166,10 +6166,6 @@
 <div class="title">Before you begin</div>
 <p>You must have successfully installed and configured the ONTAP Mediator on a network location that can be reached by both MetroCluster sites.</p>
 </div>
-<div class="paragraph">
-<div class="title">About this task</div>
-<p>You must perform this task on both clusters in the MetroCluster IP configuration.</p>
-</div>
 <div class="olist arabic">
 <div class="title">Steps</div>
 <ol class="arabic">
@@ -6189,6 +6185,35 @@
 <p><strong>Example</strong></p>
 </div>
 <div class="literalblock">
+<div class="content">
+<pre>There are no entries matching your query.</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Confirm that the ONTAP Mediator service has been removed from the MetroCluster configuration by running the following commands on both clusters:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><code>metrocluster configuration-settings mediator show</code></p>
+<div class="paragraph">
+<p><strong>Example</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>This table is currently empty.</pre>
+</div>
+</div>
+</li>
+<li>
+<p><code>storage iscsi-initiator show -label mediator</code></p>
+<div class="paragraph">
+<p><strong>Example</strong></p>
+</div>
+<div class="listingblock">
 <div class="content">
 <pre>There are no entries matching your query.</pre>
 </div>

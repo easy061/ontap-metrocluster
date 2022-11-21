@@ -6141,7 +6141,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-10-19 12:49:37 +0000">10/19/2022</time>
+    <time datetime="2022-11-14 10:09:49 +0000">11/14/2022</time>
     
   
 
@@ -6151,14 +6151,6 @@
           alt="netapp-folivia"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/91882669?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-pcarriga">
-    <img  class="avatar avatar-small"
-          alt="netapp-pcarriga"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/77334475?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -7009,9 +7001,26 @@ dr-group-id cluster    node      node-systemid dr-partner-systemid
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Issue the following command on cluster_A:</p>
+<p>Select the option that matches your configuration and issue the correct command on cluster_A:</p>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">Option 1: Four- or eight-node FC configuration running ONTAP 9.8 or later</div>
+<div class="content">
 <div class="paragraph">
-<p><code>metrocluster switchover -controller-replacement true</code></p>
+<p>Run the command: <code>metrocluster switchover -controller-replacement true</code></p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">Option 2: Two-node FC configuration running ONTAP 9.3 and later</div>
+<div class="content">
+<div class="paragraph">
+<p>Run the command: <code>metrocluster switchover</code></p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>The operation can take several minutes to complete.</p>
