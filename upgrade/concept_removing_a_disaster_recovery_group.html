@@ -6141,7 +6141,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-15 17:37:00 +0000">11/15/2022</time>
+    <time datetime="2022-11-22 14:24:55 +0000">11/22/2022</time>
     
   
 
@@ -6264,12 +6264,21 @@ Root aggregates are not deleted.
 </div>
 </li>
 <li>
+<p>Move the data LIFs offline.
++
+<code>network interface modify -vserver <em>svm-name</em> -lif <em>data-lif</em> -status-admin down</code></p>
+</li>
+<li>
 <p>Migrate all data LIFs to home nodes in another DR group.
 <br>
 <code>network interface show -home-node <em>old_node</em></code></p>
 <div class="paragraph">
-<p><code>network interface modify -vserver svm-name -lif data-lif -home-node new_node -home-port port-id</code></p>
+<p><code>network interface modify -vserver <em>svm-name</em> -lif <em>data-lif</em> -home-node <em>new_node</em> -home-port <em>port-id</em></code></p>
 </div>
+</li>
+<li>
+<p>Move the data LIFs back online.
+<code>network interface modify -vserver <em>svm-name</em> -lif <em>data-lif</em> -status-admin up</code></p>
 </li>
 <li>
 <p>Migrate the cluster management LIF to a home node in another DR group.</p>
@@ -6277,7 +6286,7 @@ Root aggregates are not deleted.
 <p><code>network interface show -role cluster-mgmt</code></p>
 </div>
 <div class="paragraph">
-<p><code>network interface modify -vserver svm-name -lif cluster_mgmt -home-node new_node -home-port port-id</code></p>
+<p><code>network interface modify -vserver <em>svm-name</em> -lif <em>cluster_mgmt</em> -home-node <em>new_node</em> -home-port <em>port-id</em></code></p>
 </div>
 <div class="paragraph">
 <p>Node management and inter-cluster LIFs are not migrated.</p>
